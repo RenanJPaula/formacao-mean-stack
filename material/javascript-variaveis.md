@@ -19,17 +19,17 @@ function hoistingExp() {
 }
 
 hoistingExp();
-```
+´´´
 Normalmente o esperado para a execução do código acima seria:
 
-```console
+```
 -> 2
 -> 2
 -> 3
 ´´´
 Entretanto devido ao hoisting a saída é:
 
-```console
+```
 -> 2
 -> undefined
 -> 3
