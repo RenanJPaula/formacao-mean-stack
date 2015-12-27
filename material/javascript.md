@@ -10,9 +10,9 @@ Algumas curiosidades e características importantes sobre a linguagem são:
   - **Scheme**: Lambda, closure e tipagem fraca;
   - **Perl**: Expreções regulares;
 
-- As pessoas que odeiam JavaScript muito provavelmente não odeiam a linguagem mas sim a manipulação de [DOM](https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos) que apresentava muita incompatibilidade entre os navegadores devido a [Guerra dos Browsers](https://pt.wikipedia.org/wiki/Guerra_dos_navegadores);
+- A manipulação de [DOM](https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos) apresentava muita incompatibilidade entre os navegadores devido a [Guerra dos Browsers](https://pt.wikipedia.org/wiki/Guerra_dos_navegadores);
 
-- É uma linguagem interpretada;
+- É uma linguagem interpretada e baseada em objetos com funções de primeira classe;
 
 - Padronizado pela [Ecma international](https://pt.wikipedia.org/wiki/Ecma_International) nas especificações ECMA-262 e ISO/IEC 16262;
 
