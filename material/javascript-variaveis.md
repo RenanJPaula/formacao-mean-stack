@@ -70,8 +70,6 @@ Exemplo:
   delete person.name;
 ```
 
-Por convenção variáveis devem começar com **letras**, **_** (para sinalizar membros privados) ou **$** (reservado para bibliotecas e frameworks) onde deve ser empregado o [CamelCase](https://pt.wikipedia.org/wiki/CamelCase).
-
 É possível criar e inicializar diversas variáveis ao mesmo tempo.
 
 Exemplo:
@@ -86,3 +84,5 @@ Exemplo:
   // var a = "A";
   // var b = a;
 ```
+
+Por convenção variáveis devem começar com **letras**, **_** (para sinalizar membros privados) ou **$** (reservado para bibliotecas e frameworks) onde deve ser empregado o [CamelCase](https://pt.wikipedia.org/wiki/CamelCase).
