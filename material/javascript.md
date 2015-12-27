@@ -1,4 +1,4 @@
-# Formação MEAN Stack - JavaScript
+# JavaScript (JS)
 
 JavaScript com certeza é a linguagem de programação mais popular da web. Foi originalmente desenvolvido por [Brendan Eich](https://pt.wikipedia.org/wiki/Brendan_Eich) quando trabalhou na Netscape. Sua história é muito interessante e vale a pena de ser estudada.
 
