@@ -2,7 +2,7 @@
 
 O JavaScript é uma linguagem case sensitive e possui tipagem dinâmica, portanto não é necessário espessificar explicitamente um tipo de uma variável. Seus tipos são definidos e convertidos no decorrer da execução dos scripts conforme a necessidade.
 
-Para a declaração de variáveis utiliza-se a palavra chave "var", "let" ou "const" onde "var" declara uma determinada variável globalmente dentro do escopo corrente, "let" define uma varivável específica para o bloco utilizado e "const" cria uma variável cujo o valor é fixo, ou seja, uma constante.
+Para a declaração de variáveis utiliza-se a palavra chave **var**, **let** ou **const** onde **var** declara uma determinada variável globalmente dentro do escopo corrente, **let** define uma varivável específica para o bloco utilizado e **const** cria uma variável cujo o valor é fixo, ou seja, uma constante.
 
 Declarações de variáveis são processadas antes que qualquer outro código seja executado, ou seja, declarar uma variável em qualquer lugar no código significa que esta declaração será içada para o inicio do mesmo. Esse comportamento é chamado de [Hoisting](http://www.w3schools.com/js/js_hoisting.asp).
 
@@ -70,7 +70,7 @@ Exemplo:
   delete person.name;
 ```
 
-Por convenção variáveis devem começar com letras, _ (para sinalizar membros privados) ou $ (reservado para bibliotecas e frameworks) onde deve ser empregado o [CamelCase](https://pt.wikipedia.org/wiki/CamelCase).
+Por convenção variáveis devem começar com **letras**, **_** (para sinalizar membros privados) ou **$** (reservado para bibliotecas e frameworks) onde deve ser empregado o [CamelCase](https://pt.wikipedia.org/wiki/CamelCase).
 
 É possível criar e inicializar diversas variáveis ao mesmo tempo.
 

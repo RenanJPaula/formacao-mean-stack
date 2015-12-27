@@ -5,10 +5,10 @@ JavaScript com certeza é a linguagem de programação mais popular da web. Foi 
 Algumas curiosidades e características importantes sobre a linguagem são:
 
 - Javascript não é Java. Basicamente foi inspirada em diversas linguagens e as principais características herdadas das mesmas são:
-  - Java: Sintaxe e convenções;
-  - Self: Herança baseada em protótipos e objetos dinâmicos;
-  - Scheme: Lambda, closure e tipagem fraca;
-  - Perl: Expreções regulares;
+  - **Java**: Sintaxe e convenções;
+  - **Self**: Herança baseada em protótipos e objetos dinâmicos;
+  - **Scheme**: Lambda, closure e tipagem fraca;
+  - **Perl**: Expreções regulares;
 
 - As pessoas que odeiam JavaScript muito provavelmente não odeiam a linguagem mas sim a manipulação de [DOM](https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos) que apresentava muita incompatibilidade entre os navegadores devido a [Guerra dos Browsers](https://pt.wikipedia.org/wiki/Guerra_dos_navegadores);
 
