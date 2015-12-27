@@ -22,8 +22,8 @@ A seguir encontra-se o conteúdo abordado no decorrer do curso sobre a linguagem
 
 ## Conteúdo
 
-- [Variáveis](./javascript-variaveis.md)
-- [Tipos de dados](./javascript-tipos-de-dados.md)
+- [Variáveis](./javascript-variaveis.md);
+- [Tipos de dados](./javascript-tipos-de-dados.md);
 
 ## Pré requisitos
 
