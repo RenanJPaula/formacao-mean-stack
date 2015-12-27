@@ -2,7 +2,7 @@
 
 O padrão ECMAScript atual define 7 tipos de dados, sendo 6 primitivos e Object.
 
-Lista com os tipos primitivos:
+Lista dos tipos primitivos:
 - Boolean
 - null
 - undefined
@@ -31,4 +31,32 @@ Exemplo:
   > 20
 ```
 
-Para cenários em que precisamos converter uma String para Number podemos utilizar dois métodos **parseInt(String, base)** onde o parâmetro base é opicional e indica o sistema numérico a ser utilizado e **parseFloat(String)**. 
+Para cenários em que precisamos converter uma String para Number podemos utilizar dois métodos **parseInt(String, base)** onde o parâmetro base é opicional e indica o sistema numérico a ser utilizado e **parseFloat(String)**.
+
+A seguir encontra-se um pouco mais sobre os tipos de dados.
+
+## Boolean
+
+O tipo boolean é o tipo mais simples de dados e o mesmo possui dois valores literais (true/false) além do wrapper [Boolean](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
+
+Um ponto importante sobre o JavaScript é que as seguintes expressões são evaluadas como false:
+
+  - false
+  - 0
+  - ''
+  - ""
+  - NaN
+  - null
+  - undefined
+  - 'false'
+  - "false"
+
+Exemplo:
+
+```js
+  if(!("Não é um número" - 22)) { // equivalente a !NaN
+    console.log('entrou!');
+  }
+
+  > 'entrou!'
+```
