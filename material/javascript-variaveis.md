@@ -9,47 +9,49 @@ Declarações de variáveis são processadas antes que qualquer outro código se
 Exemplo:
 
 ```js
-var a = 2;
-console.log(a);
+  var a = 2;
+  console.log(a);
 
-function hoistingExp() {
-    console.log(a);
-    var a = 3;
-    console.log(a);
-}
+  function hoistingExp() {
+      console.log(a);
+      var a = 3;
+      console.log(a);
+  }
 
-hoistingExp();
-´´´
+  hoistingExp();
+```
+
 Normalmente o esperado para a execução do código acima seria:
 
+```console
+  > 2
+  > 2
+  > 3
 ```
--> 2
--> 2
--> 3
-´´´
+
 Entretanto devido ao hoisting a saída é:
 
+```console
+  > 2
+  > undefined
+  > 3
 ```
--> 2
--> undefined
--> 3
-´´´
 
 O que acontece é que o código se torna o equivalente à:
 
 ```js
-var a; // Declaração içada
-a = 2;
-console.log(a);
+  var a; // Declaração içada
+  a = 2;
+  console.log(a);
 
-function hoistingExp() {
-    var a; // Declaração içada
-    console.log(a);
-    a = 3;
-    console.log(a);
-}
+  function hoistingExp() {
+      var a; // Declaração içada
+      console.log(a);
+      a = 3;
+      console.log(a);
+  }
 
-hoistingExp();
+  hoistingExp();
 ```
 
 A atribuição de um valor a uma variável não declarada inplica em criar uma variável global. Variáveis declaradas são criadas antes de qualquer código ser executado já as variáveis não declaradas só são criadas no momento da atribuição.
