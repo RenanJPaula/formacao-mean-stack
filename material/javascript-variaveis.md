@@ -70,7 +70,7 @@ Exemplo:
   delete person.name;
 ```
 
-É possível criar e inicializar diversas variáveis ao mesmo tempo.
+Em JavaScript é possível criar e inicializar diversas variáveis ao mesmo tempo.
 
 Exemplo:
 
