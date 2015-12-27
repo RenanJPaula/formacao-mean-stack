@@ -54,7 +54,7 @@ O que acontece é que o código se torna o equivalente à:
   hoistingExp();
 ```
 
-A atribuição de um valor a uma variável não declarada inplica em criar uma variável global. Variáveis declaradas são criadas antes de qualquer código ser executado já as variáveis não declaradas só são criadas no momento da atribuição.
+A atribuição de um valor a uma variável não declarada implica em criar uma variável global. Variáveis declaradas são criadas antes de qualquer código ser executado já as variáveis não declaradas só são criadas no momento da atribuição.
 
 A atribuição de valores a variáveis não declaradas em [modo restrito](http://www.w3schools.com/js/js_strict.asp) ('use strict') implica no lançamento da exceção ReferenceError.
 
@@ -71,3 +71,18 @@ Exemplo:
 ```
 
 Por convenção variáveis devem começar com "letras", "_" (para sinalizar membros privados) ou "$" (reservado para bibliotecas e frameworks) onde deve ser empregado o [CamelCase](https://pt.wikipedia.org/wiki/CamelCase).
+
+É possível criar e inicializar diversas variáveis ao mesmo tempo.
+
+Exemplo:
+
+´´´js
+  var a = 10, b = 4, c = 7;
+´´´
+
+´´´js
+  var a, b = a = "A";
+  // Equivalente a
+  // var a = "A";
+  // var b = a;
+´´´
