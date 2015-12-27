@@ -14,3 +14,4 @@ Todos os materiais utilizados durante o curso serão disponibilizados e lincados
 
 - [JavaScript (JS)](./material/javascript.md);
   - [Variáveis](./material/javascript-variaveis.md);
+  - [Tipos de dados](./material/javascript-tipos-de-dados.md)

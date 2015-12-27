@@ -23,6 +23,11 @@ A seguir encontra-se o conteúdo abordado no decorrer do curso sobre a linguagem
 ## Conteúdo
 
 - [Variáveis](./javascript-variaveis.md)
+- [Tipos de dados](./javascript-tipos-de-dados.md)
+
+## Pré requisitos
+
+Durante o curso utilizaremos o [NodeJS](https://nodejs.org) para execução dos exemplos de código e aplicações desenvolvidas.
 
 ## Saiba mais
 

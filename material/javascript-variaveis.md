@@ -1,4 +1,4 @@
-# Variáveis JavaScript
+# Variáveis em JavaScript
 
 O JavaScript é uma linguagem case sensitive e possui tipagem dinâmica, portanto não é necessário espessificar explicitamente um tipo de uma variável. Seus tipos são definidos e convertidos no decorrer da execução dos scripts conforme a necessidade.
 
