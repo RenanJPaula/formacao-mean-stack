@@ -18,14 +18,14 @@ Algumas curiosidades e características importantes sobre a linguagem são:
 
 - Não apresenta suporte a programação multi-thread;
 
-A seguir encontra-se o conteúdo abordo sobre a linguagem no decorrer do curso:
+A seguir encontra-se o conteúdo abordado no decorrer do curso sobre a linguagem:
 
 ## Conteúdo
 
-- Variáveis
+- [Variáveis](./javascript-variaveis.md)
 
 ## Saiba mais
 
-A seguir encontra-se uma lista de materiais relacionados e indicados para estudo:
+A seguir encontra-se uma lista de materiais relacionados e indicados para o estudo:
 
 - [Desvendando a linguagem JavaScript por Rodrigo Branas](https://www.youtube.com/playlist?list=PLQCmSnNFVYnT1-oeDOSBnt164802rkegc)
