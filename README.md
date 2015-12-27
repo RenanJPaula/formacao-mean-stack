@@ -13,3 +13,4 @@ Todos os materiais utilizados durante o curso serão disponibilizados e lincados
 ## Índice
 
 - [JavaScript (JS)](./material/javascript.md);
+  - [Variáveis](./material/javascript-variaveis.md);
