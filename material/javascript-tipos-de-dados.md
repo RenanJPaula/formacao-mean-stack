@@ -63,11 +63,11 @@ Exemplo:
 
 # null
 
-Em JavaScript null é o tipo primitivo que indica a ausencia de valor.
+Em JavaScript **null** é o tipo primitivo que indica a ausencia de valor.
 
 # undefined
 
-Em JavaScript undefined representa a inexistência de uma determinada propriedade.
+Em JavaScript **undefined** representa a inexistência de uma determinada propriedade.
 
 # Number
 
