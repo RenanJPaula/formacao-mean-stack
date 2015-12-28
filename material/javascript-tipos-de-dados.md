@@ -88,4 +88,4 @@ Para compreender e utilizar as principais funções de manipulação de números
 
 # Synbol
 
-Definido na ECMAScript 6, representa um tipo de dado cuja as instancias são imutáveis e únicas.
+Definido na ECMAScript 6, representa um tipo de dado cuja as instancias são imutáveis e únicas. Para mais informações veja [aqui](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
