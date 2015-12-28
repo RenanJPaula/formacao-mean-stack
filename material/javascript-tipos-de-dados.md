@@ -84,4 +84,4 @@ Exemplo:
 
 O "00000000000000004" é um residuo decorrente da operação binária. Veja mais [aqui](http://0.30000000000000004.com/).
 
-Para compreender e utilizar as principais funções de manipulação de números em JavaScript veja [aqui](http://www.w3schools.com/js/js_number_methods.asp).
+Para compreender e utilizar as principais funções de manipulação de números em JavaScript veja [aqui](http://www.w3schools.com/js/js_number_methods.asp) e para compreender a Math Api veja [aqui](http://www.w3schools.com/jsref/jsref_obj_math.asp).
