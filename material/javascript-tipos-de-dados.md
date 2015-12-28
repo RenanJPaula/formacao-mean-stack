@@ -71,7 +71,7 @@ Em JavaScript undefined representa a inexistência de uma determinada propriedad
 
 # Number
 
-Em JavaScript todos os números são agrupados pelo tipo Number. Além de representar os números o mesmo possui três valores simbólicos, +Infinity, -Infinity e NaN. Isso mesmo, por mais incrível que pareça, typeof NaN é Number!
+Em JavaScript todos os números são agrupados pelo tipo Number. Além de representar os números o mesmo possui três valores simbólicos, **+Infinity**, **-Infinity** e **NaN**. Isso mesmo, por mais incrível que pareça, typeof NaN é Number!
 
 Um ponto de atenção é que o JavaScript bem como outras linguagens utilizam o padrão [Double Precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) para representação dos números e devemos tomar alguns cuidados.
 
