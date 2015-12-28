@@ -33,6 +33,7 @@ Durante o curso utilizaremos o [NodeJS](https://nodejs.org) para execução dos 
 
 A seguir encontra-se uma lista de materiais relacionados e indicados para o estudo:
 
-- [Desvendando a linguagem JavaScript por Rodrigo Branas](https://www.youtube.com/playlist?list=PLQCmSnNFVYnT1-oeDOSBnt164802rkegc)
-- [Guia da Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [Dicas de JavaScript](https://www.youtube.com/playlist?list=PLDm7BSK-M5YloYXPGmK_KEno4_Ql_Q5nS)
+- [Desvendando a linguagem JavaScript por Rodrigo Branas](https://www.youtube.com/playlist?list=PLQCmSnNFVYnT1-oeDOSBnt164802rkegc);
+- [Guia da Mozilla](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript);
+- [Dicas de JavaScript](https://www.youtube.com/playlist?list=PLDm7BSK-M5YloYXPGmK_KEno4_Ql_Q5nS);
+- [w3schools](http://www.w3schools.com/js/);
