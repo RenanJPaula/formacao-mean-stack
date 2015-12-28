@@ -19,7 +19,7 @@ Exemplo:
   value = 10;
 ```
 
-Outro ponto interessante relacionado a conversão automática é que quanto empregamos o operador de soma em expressões que envolvem valores String e Number o Number é convertido para String, já para os demais operadores como subtração, multiplicação ou divisão a String é convertida para Number.
+Outro ponto interessante relacionado a conversão automática é que quanto empregamos o operador de soma em expressões que envolvam valores String e Number o Number é convertido para String, já para os demais operadores como subtração, multiplicação ou divisão a String é convertida para Number.
 
 Exemplo:
 
@@ -60,3 +60,26 @@ Exemplo:
 
   > 'entrou!'
 ```
+
+# null
+
+Em JavaScript null é o tipo primitivo que indica a ausencia de valor.
+
+# undefined
+
+Em JavaScript undefined representa a inexistência de uma determinada propriedade.
+
+# Number
+
+Em JavaScript todos os números são agrupados pelo tipo Number. Além de representar os números o mesmo possui três valores simbólicos, +Infinity, -Infinity e NaN. Isso mesmo, por mais incrível que pareça, typeof NaN é Number!
+
+Um ponto de atenção é que o JavaScript bem como outras linguagens utilizam o padrão [Double Precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) para a representação dos números e devemos tomar alguns cuidados.
+
+Exemplo:
+
+```js
+  0.1 + 0.2;
+  > 0.30000000000000004
+```
+
+O "00000000000000004" é um residuo decorrente da operação binária. Veja mais [aqui](http://0.30000000000000004.com/).  
