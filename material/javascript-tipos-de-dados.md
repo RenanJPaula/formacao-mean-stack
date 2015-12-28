@@ -73,7 +73,7 @@ Em JavaScript undefined representa a inexistência de uma determinada propriedad
 
 Em JavaScript todos os números são agrupados pelo tipo Number. Além de representar os números o mesmo possui três valores simbólicos, +Infinity, -Infinity e NaN. Isso mesmo, por mais incrível que pareça, typeof NaN é Number!
 
-Um ponto de atenção é que o JavaScript bem como outras linguagens utilizam o padrão [Double Precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) para a representação dos números e devemos tomar alguns cuidados.
+Um ponto de atenção é que o JavaScript bem como outras linguagens utilizam o padrão [Double Precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) para representação dos números e devemos tomar alguns cuidados.
 
 Exemplo:
 
@@ -82,4 +82,6 @@ Exemplo:
   > 0.30000000000000004
 ```
 
-O "00000000000000004" é um residuo decorrente da operação binária. Veja mais [aqui](http://0.30000000000000004.com/).  
+O "00000000000000004" é um residuo decorrente da operação binária. Veja mais [aqui](http://0.30000000000000004.com/).
+
+Para compreender e utilizar as principais funções de manipulação de números em JavaScript veja [aqui](http://www.w3schools.com/js/js_number_methods.asp).
