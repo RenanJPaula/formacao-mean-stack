@@ -149,7 +149,7 @@ Exemplo:
 
 Pelo fato dos objetos em JavaScript serem uma coleção de dados, podemos acessar seus valores através da notação de array.
 
-Este tipo de notação se mostra muito útil quando precisamos acessar dinâmicamente as propriedades de objetos.
+Este tipo de notação se mostra muito útil quando precisamos acessar dinâmicamente as propriedades dos objetos.
 
 Exemplo:
 
