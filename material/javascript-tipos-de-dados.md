@@ -89,3 +89,81 @@ Para compreender e utilizar as principais funções de manipulação de números
 # Synbol
 
 Definido na ECMAScript 6, representa um tipo de dado cuja as instancias são imutáveis e únicas. Para mais informações veja [aqui](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
+
+# String
+
+Strings são compostas por um conjunto de caracteres e representam um texto, são objetos imutaveis e sua declaração se dá a partir de aspas duplas ou aspas simples.
+
+Para saber mais sobre os métodos que o Wrapper fornece veja [aqui](http://www.w3schools.com/jsref/jsref_obj_string.asp).
+
+# Object
+
+Em JavaScript não temos classes, construtor ou métodos. Objetos são estruturas de dados dinâmicas de chave valor que comportam qualquer tipo de dados.
+
+Construção literal de um objeto:
+
+```js
+
+  var pessoa = {};
+
+```
+
+A qualquer momento podemos adicionar e remover propriedades de um determinado Objeto.
+
+Exemplo:
+
+```js
+
+  var pessoa = {
+    nome: 'Renan'
+  };
+
+  pessoa.idade = 24;
+
+  delete pessoa.nome
+
+```
+
+Propriedades de um determinado objeto podem ser outros objetos bem como funções.
+
+Exemplo:
+
+```js
+
+  var pessoa = {
+    nome: 'Renan',
+    endereco: {
+      logradouro: 'José Inocencio de Camargo Lima Filho',
+      numero: '223'
+    },
+    falar: function() {
+      console.log('Falar o que?');
+    }
+  };
+
+  pessoa.falar();
+
+  > Falar o que?
+
+```
+
+Pelo fato dos objetos em JavaScript serem uma coleção de dados, podemos acessar seus valores através da notação de array. Isso é muito útil quando queremos acessar as propriedades do objeto dinâmicamente.
+
+Exemplo:
+
+```js
+
+  var pessoa = {
+    nome: 'Renan',
+  }
+
+  pessoa['idade'] = 24;
+
+  for (var prop in pessoa) {
+    console.log( pessoa[prop] );
+  }
+
+  > Renan
+  > 24
+
+```
