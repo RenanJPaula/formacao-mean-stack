@@ -62,7 +62,7 @@ Dentre os operadores de comparação temos:
 
 | Operador | Descrição |
 | -------- | --------- |
-| == | Retorna true se os operandos são iguais. Um detalhe importante sobre este operador é que o mesmo não leva em consideração o tipo do valor ou seja, comparações como **10 == '10'** retornam true. Isso se dá devido a coersão de tipos. |
+| == | Retorna true se os operandos são iguais. Um detalhe importante sobre este operador é que o mesmo não leva em consideração o tipo do dado ou seja, comparações como **10 == '10'** retornam true. Isso se dá devido a coerção de tipos. |
 | === | Retorna true se os operandos são iguais. Este operador diferente do **==** leva em consideração o tipo dos operandos, logo operações como **10 === '10'** retornam false. |
 | != | Retorna true se os operandos são diferentes sem levar em consideração os tipos. |
 | !== | Retorna true se os operandos são diferentes considerando os tipos. |
@@ -70,3 +70,23 @@ Dentre os operadores de comparação temos:
 | < | Retorna true se o operando da esquerda for menor que o da direita. |
 | >= | Retorna true se o operando da esquerda for maior ou igual ao da direita. |
 | <= | Retorna true se o operando da esquerda for menor ou igual ao da direita. |
+
+A coerção de tipos, em resumo, é a conversão automática realizada para a comparação de dados de tipos distintos. No caso da comparação entre Number e String a String é convertida automáticamente para Number.
+
+Para a comparação entre objetos e valores primitivos o JavaScript evalua o objeto atrabés da função **ToPrimitive(value)** que por sua vez faz o uso das funções **valueOf** e **toString** respectivamente para realizar a evaluação. Devido a este comportamento podemos sobreescrever a função **valueOf** ou **toString** para realizarmos comparações.
+
+Por exemplo:
+
+```js
+  var obj = {};
+
+  obj == true;
+  > false
+
+  obj.valueOf = function() {
+    return true;
+  };
+
+  obj == true;
+  > true
+```
