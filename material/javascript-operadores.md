@@ -60,4 +60,5 @@ Exemplo:
 Operadores de comparação comparam dois operandos e retornam um valor lógico. Dentre eles temos:
 
 | Operador | Descrição |
+| -------- | --------- |
 | == | Retorna true se os operandos são iguais. Um detalhe importante sobre este operador é que o mesmo não leva em consideração o tipo do valor ou seja, comparações como **10 == '10'** retornam true. Isso se dá devido a coersão de tipos. |
