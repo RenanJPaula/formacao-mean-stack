@@ -90,3 +90,20 @@ Por exemplo:
   obj == true;
   > true
 ```
+
+## Operadores aritiméticos
+
+Operadores aritiméticos atuam sobre operandos numéricos e retornam outro valor numérico.
+
+Dentre os operadores aritiméticos temos:
+
+| Operador | Descrição |
+| -------- | --------- |
+| + | Operador de soma. |
+| - | Operador de subtração. |
+| * | Operador de multiplicação. |
+| / | Operador de divisão. |
+| % | Operador de módulo. Retorna o resto da divisão entre dois operandos. |
+| ++ | Incremento. |
+| -- | Decremento. |
+| - | Negação. Exemplo: Se x = 1, então -x é -1. |
