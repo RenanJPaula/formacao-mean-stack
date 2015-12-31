@@ -107,3 +107,13 @@ Dentre os operadores aritiméticos temos:
 | ++ | Incremento. |
 | -- | Decremento. |
 | - | Negação. Exemplo: Se x = 1, então -x é -1. |
+
+## Operadores lógicos
+
+Operadores lógicos são utilizados normalmente com valores booleanos. Em JavaScript os operadores **&&** e **||** tem outras finalidades.
+
+| Operador | Descrição |
+| -------- | --------- |
+| && | Quando utilizado com valores booleanos retorna true caso os dois operandos sejam verdadeiros, já quando utilizado sobre outros valores o retorna o operando da esquerda quando o mesmo for evaluado para false senão retorna o operando da direita. |
+| || | Quando utilizado com valores booleanos retorna true caso um dos dois operandos sejam verdadeira, já quando utilizado sobre outros valores retorna o operando da esquerda caso o mesmo seja evaluado para true senão retorna o operando a direita. |
+| ! | Negação lógica. Se x = true, !x retorna false. |
