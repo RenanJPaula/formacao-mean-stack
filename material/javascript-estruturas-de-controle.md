@@ -9,31 +9,26 @@ As estruturas condicionais tem por objetivo possibilitar a tomada de decisão po
 Exemplo:
 
 ```js
-  if(/* se essa expressão for verdadeira */) {
-
-    /* execute este bloco */
-
-  } else if(/* senão, se essa expressão for verdadeira */) {
-
-    /* execute este bloco */
-
+  if(numero > 0) {
+    console.log('Número maior que zero');
+  } else if(numero < 0) {
+    console.log('Número menor que zero');
   } else {
-
-    /* senão execute este bloco */
-
+    console.log('Número zero');
   }
 ```
 
 ```js
-  switch(/* String ou Number */) {
-    case valor1: /* Se valor1 === a String ou o Number */
-      // ...
+  switch(numero) {
+    case 1:
+      console.log('Número um');
       break;
-    case valor2: /* Se valor2 === a String ou o Number */
-      // ...
+    case 10:
+      console.log('Número dez');
       break;
-    default: /* Senão */
-      // ...
+    default:
+      console.log('Número diferente de um ou dez');
+      break;
   }
 ```
 
@@ -51,7 +46,7 @@ Exemplo:
 
 ```js
   for(var i = 0; i <= 10; i++) {
-    // ...
+    console.log(i);
   }
 ```
 
@@ -64,7 +59,7 @@ Exemplo:
 ```js
   var i = 0;
   while(i <= 10) {
-    // ...
+    console.log(i);
     i++;
   }
 ```
@@ -76,7 +71,7 @@ Exemplo:
 ```js
   var i = 0;
   do {
-    // ...
+    console.log(i);
     i++;
   } while(i <= 10);
 ```
