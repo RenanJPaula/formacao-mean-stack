@@ -26,6 +26,7 @@ A seguir encontra-se o conteúdo abordado no decorrer do curso sobre a linguagem
 - [Tipos de dados](./javascript-tipos-de-dados.md);
 - [Operadores](./javascript-operadores.md);
 - [Estruturas de controle](./javascript-estruturas-de-controle.md);
+- [Funções](./javascript-funcoes.md);
 
 ## Pré requisitos
 
