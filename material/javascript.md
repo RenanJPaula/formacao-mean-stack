@@ -8,7 +8,7 @@ Algumas curiosidades e características importantes sobre a linguagem são:
   - **Java**: Sintaxe e convenções;
   - **Self**: Herança baseada em protótipos e objetos dinâmicos;
   - **Scheme**: Lambda, closure e tipagem fraca;
-  - **Perl**: Expreções regulares;
+  - **Perl**: Expressões regulares;
 
 - A manipulação de [DOM](https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos) apresentava muita incompatibilidade entre os navegadores devido a [Guerra dos Browsers](https://pt.wikipedia.org/wiki/Guerra_dos_navegadores);
 
