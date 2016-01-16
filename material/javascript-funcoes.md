@@ -95,3 +95,19 @@ Funções podem ser invocadas através dos métodos **call** e **aply** contidos
 A diferença de **call** e **aply** se da na forma como passamos os parâmetros para a função a ser chamada onde em **call** utilizamos a passagem de parâmetros convencionais e no **apply** utilizamos um array de parâmetros.
 
 ### Invocação através do operador new
+
+Través do operador **new** podemos invocar funções para a criação de objetos. Por convenção as funções que serão utilizadas desta forma são criadas com a primeira letra em maíusculo assim como as classes em Java.
+
+Exemplo:
+
+```js
+  function Pessoa(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  var renan = new Pessoa('renan jp', 24);
+  var jov = new Pessoa('matheus', 26);
+```
+
+O this referencia o objeto que está sendo criado e desta forma conseguimos simular uma estrutura similar as classes do Java.
