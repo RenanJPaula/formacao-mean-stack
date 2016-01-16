@@ -110,4 +110,4 @@ Exemplo:
   var jov = new Pessoa('matheus', 26);
 ```
 
-O this referencia o objeto que está sendo criado e desta forma conseguimos simular uma estrutura similar as classes do Java.
+Para entender melhor como o operador **new** funciona basicamente ele cria um novo objeto para passar como escopo da função ou seja, this referencia o objeto que está sendo criado e desta forma conseguimos simular uma estrutura similar as classes do Java.
