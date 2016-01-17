@@ -114,7 +114,7 @@ Para entender melhor como o operador **new** funciona basicamente ele cria um no
 
 ## Closures
 
-Closures (fechamentos) é a capacidade das funções se "lembrarem" do contexto onde as mesmas foram criadas. Esta capacidade de associar dados (do ambiente) com uma função  está diretamente ligado a orientção a objetos, onde os objetos nos permitem associar dados (propriedades do objeto) utilizando um ou mais métodos.
+Closures (fechamentos) é a capacidade das funções de "lembrarem" do contexto onde as mesmas foram criadas. Esta capacidade de associar dados do ambiente com uma função  está diretamente ligada a orientção a objetos, onde os objetos nos permitem associar dados (propriedades do objeto) utilizando um ou mais métodos.
 
 Exemplo:
 
