@@ -111,3 +111,46 @@ Exemplo:
 ```
 
 Para entender melhor como o operador **new** funciona basicamente ele cria um novo objeto para passar como escopo da função ou seja, this referencia o objeto que está sendo criado e desta forma conseguimos simular uma estrutura similar as classes do Java.
+
+## Closures
+
+Closures (fechamentos) é a capacidade das funções se "lembrarem" do contexto onde as mesmas foram criadas. Esta capacidade de associar dados (do ambiente) com uma função  está diretamente ligado a orientção a objetos, onde os objetos nos permitem associar dados (propriedades do objeto) utilizando um ou mais métodos.
+
+Exemplo:
+
+```js
+function soma(x) {
+  return function(y) {
+    return x + y;
+  };
+}
+
+var somaBase = soma(5);
+
+var soma5 = somaBase(5);
+> 10
+
+var soma10 = somaBase(10);
+> 15
+```
+
+## Callback
+
+Callback é um pedaço de código executável que é passado como parâmetro para ser executado em um momento oportuno, seja após a consulta assincrona a um banco de dados ou após a obtenção da resposta de uma requisição ajax.
+
+Esta estratégia é bem parecida com o padrão de projeto listener.
+
+Exemplo:
+
+```js
+
+let query = { nome: 'renan' };
+Cliente.find(query, callback);
+
+// Esta função será executada após a pesquisa no banco de dados
+function callback(err, data) {
+  if (err) console.log(err);
+  else console.log(data);
+}
+
+```
