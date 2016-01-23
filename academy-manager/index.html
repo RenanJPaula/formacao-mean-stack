@@ -3,34 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Students</title>
-    <script src="js/student-controller.js"></script>
   </head>
   <body>
     <h1>Student</h1>
 
-    <form>
+    <form id="studentForm">
       <label for="name">Name:</label>
-      <input type="text" id="name" value="">
+      <input type="text" id="name" value="" required>
 
       <br>
 
       <label for="phone">Phone:</label>
-      <input type="text" id="phone" value="">
+      <input type="text" id="phone" value="" required>
 
       <br>
 
       <label for="mail">Mail:</label>
-      <input type="text" id="mail" value="">
+      <input type="email" id="mail" value="" required>
 
       <br>
 
       <label for="address">Address:</label>
-      <input type="text" id="address" value="">
+      <input type="text" id="address" value="" required>
 
       <br>
 
-      <input type="button" id="save" value="Save">
+      <input type="submit" value="Save">
     </form>
 
+    <script src="js/student-controller.js"></script>
   </body>
 </html>
