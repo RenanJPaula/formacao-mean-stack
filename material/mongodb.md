@@ -20,4 +20,4 @@ MongoDB é um banco de dados orientado a arquivos projetado para facilitar o des
 
 A ilustração abaixo mostra a distribuição do mongo dentre os demais banco de dados.
 
-![Features vs Scale](./images/feature-vs-scale.png)
+![Features vs Scale](./imagens/feature-vs-scale.png)
