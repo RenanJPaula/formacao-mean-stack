@@ -66,10 +66,14 @@ Para facilitar a utilização do mongo pelo show podemos adicionao o [mongo-hack
 
 As operações são realizadas sobre os arquivos das coleções de um determinado banco de dados. Para a seleção de um banco de dados utilizamos a palavra reservada **use**. Um banco de dados ou uma coleção são criados a partir da primeira operação sobre os mesmos.
 
+Ao referenciarmos um banco de dados através do comando **use** o mesmo é atribuido a variável **db**.
+
 Exemplo:
 
 ```mongodb
   use escola
+  db
+  > escola
 ```
 
 Para exibir os bancos de dados e as coleções existentes utilizamos o comando **show**.
@@ -89,7 +93,7 @@ Exemplo:
 
 O material referente as operações de CRUD está disponíveis em:
 
-- [Create]();
+- [Create](./material/mongodb-insercao);
 - [Retrieve]();
 - [Update]();
 - [Delete]();
@@ -97,3 +101,6 @@ O material referente as operações de CRUD está disponíveis em:
 ## Saiba mais
 
 A seguir encontra-se uma lista de materiais relacionados e indicados para o estudo:
+
+- [Manual](https://docs.mongodb.org/manual/);
+- [Mongo University](https://university.mongodb.com/);
