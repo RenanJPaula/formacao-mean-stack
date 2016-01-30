@@ -39,3 +39,7 @@ Em sql o equivalente seria:https://docs.mongodb.org/manual/core/write-operations
   VALUES ('Renan Johannsen de Paula');
 
 ```
+
+## Ver
+
+https://docs.mongodb.org/manual/core/write-operations-introduction/
