@@ -93,7 +93,7 @@ Exemplo:
 
 O material referente as operações de CRUD está disponíveis em:
 
-- [Create](./mongodb-insercao);
+- [Create](./mongodb-insercao.md);
 - [Retrieve]();
 - [Update]();
 - [Delete]();
