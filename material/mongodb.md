@@ -32,16 +32,68 @@ Os documentos são agrupados por coleções. Fazendo uma analogia aos banco de d
 
 Os dados no mongo são livres de schema, ou seja, não seguem uma definição prévia como as tabelas dos banco de dados sql. Na pratica em uma coleção de documentos podem haver documentos completamente distintos facilitando a adaptação do banco de dados a mudanças.
 
-#Instalação
+## Instalação
 
 Para a realização da instalação clique [aqui](https://docs.mongodb.org/manual/installation/);
 
-# Operações
+## Utilização
 
-As operações são realizadas sobre os arquivos das coleções de um determinado banco de dados. Para a seleção de um banco de dados utilizamos a palavra reservada **use**.
+Para conseguirmos utilizar o MongoDB primeiramente precisamos iniciar o serviço em background e posteriormente conectar através da interface disponibilizada via shell.
+
+```mongodb
+  sudo service mongod start
+```
+
+```mongodb
+  mongo
+
+  > MongoDB shell version: 3.2.1
+  > connecting to: test
+  > Mongo-Hacker 0.0.9
+  > Server has startup warnings:
+  > 2016-01-29T20:06:49.198-0200 I CONTROL  [initandlisten]
+  > 2016-01-29T20:06:49.198-0200 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+  > 2016-01-29T20:06:49.198-0200 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+  > 2016-01-29T20:06:49.198-0200 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+  > 2016-01-29T20:06:49.198-0200 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+  > 2016-01-29T20:06:49.198-0200 I CONTROL  [initandlisten]
+  > Inspiron-5548(mongod-3.2.1) test>
+```
+
+Para facilitar a utilização do mongo pelo show podemos adicionao o [mongo-hacker](https://github.com/TylerBrock/mongo-hacker).
+
+## Operações
+
+As operações são realizadas sobre os arquivos das coleções de um determinado banco de dados. Para a seleção de um banco de dados utilizamos a palavra reservada **use**. Um banco de dados ou uma coleção são criados a partir da primeira operação sobre os mesmos.
 
 Exemplo:
 
 ```mongodb
-  use alunos
+  use escola
 ```
+
+Para exibir os bancos de dados e as coleções existentes utilizamos o comando **show**.
+
+Exemplo:
+
+```mongodb
+  show dbs
+```
+
+```mongodb
+  use escola
+  show collections
+```
+
+### CRUD
+
+O material referente as operações de CRUD está disponíveis em:
+
+- [Create]();
+- [Retrieve]();
+- [Update]();
+- [Delete]();
+
+## Saiba mais
+
+A seguir encontra-se uma lista de materiais relacionados e indicados para o estudo:
