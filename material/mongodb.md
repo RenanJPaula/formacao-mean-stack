@@ -89,14 +89,9 @@ Exemplo:
   show collections
 ```
 
-### CRUD
+### Materual
 
-O material referente as operações de CRUD está disponíveis em:
-
-- [Create](./mongodb-insercao.md);
-- [Retrieve]();
-- [Update]();
-- [Delete]();
+Para fins didáticos utilizaremos como material do curso o próprio [manual do mongo](https://docs.mongodb.org/manual/) uma vez que a mesma é bem completa e didática.
 
 ## Saiba mais
 
