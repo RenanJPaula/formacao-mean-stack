@@ -1,0 +1,21 @@
+{
+  "name": "data-import",
+  "version": "1.0.0",
+  "description": "Import xls file to mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Data",
+    "Import",
+    "XLSX"
+  ],
+  "author": "Renan Johannsen de Paula",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "mongoose": "^4.4.2",
+    "node-xlsx": "^0.6.0"
+  }
+}
