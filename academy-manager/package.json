@@ -1,0 +1,19 @@
+{
+  "name": "academy-manager",
+  "version": "1.0.0",
+  "description": "School Api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Academy",
+    "Manager",
+    "API"
+  ],
+  "author": "Renan Johannsen de Paula",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.4.3"
+  }
+}
