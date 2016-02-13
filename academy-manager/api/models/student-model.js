@@ -33,7 +33,17 @@ var mongoose = require('mongoose')
  * @return {Promise}
  */
 module.exports.findAll = function findAll() {
+  return new Promise(function(resolve, reject) {
+    let query = { active: true };
 
+    Student.find(query, function(err, data) {
+      if(err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
 };
 
 /**
@@ -42,25 +52,63 @@ module.exports.findAll = function findAll() {
  * @return {Promise}
  */
 module.exports.findById = function findById(studentId) {
+  return new Promise(function(resolve, reject) {
+    let query = { _id : studentId };
 
+    Student.findOne(query, function(err, data) {
+      if(err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
 };
 
 /**
  * Insert Student
  * @param  {Student} student [required]
- * @return {Prmise}
+ * @return {Promise}
  */
 module.exports.save = function save(student) {
-  
+  return new Promise(function(resolve, reject) {
+    new Student(student).save(function(err, data) {
+      if(err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
 };
 
 /**
  * Modify Student
  * @param  {Student} student [required]
- * @return {Primise}
+ * @return return new Promise(function(resolve, reject) {
+    let query = { active: true };
+
+    Student.find(query, function(err, data) {
+      if(err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });{Promise}
  */
 module.exports.update = function update(student) {
+  return new Promise(function(resolve, reject) {
+    let query = { _id : student._id };
 
+    Student.update(query, student, function(err, data) {
+      if(err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
 };
 
 /**
@@ -69,5 +117,16 @@ module.exports.update = function update(student) {
  * @return {Promise}
  */
 module.exports.remove = function remove(studentId) {
+  return new Promise(function(resolve, reject) {
+    let query = { _id : studentId }
+      , mod = { active: false };
 
+    Student.update(query, mod, function(err, data) {
+      if(err) {
+        reject(err);
+      } else {
+        resolve(data);
+      }
+    });
+  });
 };
