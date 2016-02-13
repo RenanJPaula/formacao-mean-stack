@@ -18,8 +18,8 @@ var mongoose = require('mongoose')
       name: { type: mongoose.Schema.Types.String, required: true, trim: true },
       birthDate: { type: mongoose.Schema.Types.Date, required: true },
       sex: { type: mongoose.Schema.Types.String, enum: ['Male', 'Female'], default: 'Male' },
-      cpf: { type: String, required: true, trim: true },
-      rg: { type: String, required: true, trim: true },
+      cpf: { type: mongoose.Schema.Types.String, required: true, trim: true },
+      rg: { type: mongoose.Schema.Types.String, required: true, trim: true },
       email: { type: mongoose.Schema.Types.String, required: true, trim: true, unique: true },
       phones: { type: [mongoose.Schema.Types.String], default: [] },
       address: { type: [addressSchema], default: [] },
@@ -28,16 +28,46 @@ var mongoose = require('mongoose')
     })
   , Student = mongoose.model('Student', studentSchema);
 
+/**
+ * Find all active Students
+ * @return {Promise}
+ */
 module.exports.findAll = function findAll() {
-  return new Promise(function(resolve, reject) {
-    let query = { active: true };
-    Student.find(query, function(err, data) {
-      if(err) {
-        reject(err);
-      }
-      else {
-        resolve(data);
-      }
-    });
-  });
+
+};
+
+/**
+ * Find Student by _ID
+ * @param  {String} studentId [required] ObjectId
+ * @return {Promise}
+ */
+module.exports.findById = function findById(studentId) {
+
+};
+
+/**
+ * Insert Student
+ * @param  {Student} student [required]
+ * @return {Prmise}
+ */
+module.exports.save = function save(student) {
+  
+};
+
+/**
+ * Modify Student
+ * @param  {Student} student [required]
+ * @return {Primise}
+ */
+module.exports.update = function update(student) {
+
+};
+
+/**
+ * Inactivate Student by _ID
+ * @param  {String} studentId [required] ObjectId
+ * @return {Promise}
+ */
+module.exports.remove = function remove(studentId) {
+
 };
