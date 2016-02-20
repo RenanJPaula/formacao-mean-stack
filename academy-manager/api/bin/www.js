@@ -3,8 +3,10 @@
 var http = require('http')
   , app = require('../app');
 
-var server = http.createServer(app);
+// Criamos o servidor http com o gerenciador de rotas do nosso app
+var httpServer = http.createServer(app);
 
-server.listen(3000, function() {
-  console.log("Server listening on: http://localhost:%s", 3000);
+// Mandamos o servidor escutar a porta 3000
+httpServer.listen(3000, function() {
+  console.log('Servidor escutando a porta ' + 3000);
 });
