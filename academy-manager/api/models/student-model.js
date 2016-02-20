@@ -16,7 +16,7 @@ var mongoose = require('mongoose')
     })
   , studentSchema = new mongoose.Schema({
       name: { type: mongoose.Schema.Types.String, required: true, trim: true },
-      birthDate: { type: mongoose.Schema.Types.Date, required: true },
+      birthDate: { type: mongoose.Schema.Types.Date, default: null },
       sex: { type: mongoose.Schema.Types.String, enum: ['Male', 'Female'], default: 'Male' },
       cpf: { type: mongoose.Schema.Types.String, required: true, trim: true },
       rg: { type: mongoose.Schema.Types.String, required: true, trim: true },
