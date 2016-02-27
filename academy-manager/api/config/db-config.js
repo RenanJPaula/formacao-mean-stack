@@ -1,27 +1,29 @@
 'use strict';
 
-var mongoose = require('mongoose');
+var mongoose = require('mongoose')
+  , env = require('./env-config')
+  , debug = require('debug')(env.appName + ':db');
 
 // configure a mongoose connection
-mongoose.connect('mongodb://localhost/school');
+mongoose.connect(env.db.uri, env.db.credentials);
 
 var db = mongoose.connection;
 
 // configure connection listeners
 db.on('connected', function () {
-  console.log('MongoDB connected.');
+  debug('MongoDB connected.');
 }).on('open', function () {
-  console.log('MongoDB open.');
+  debug('MongoDB open.');
 }).on('disconnected', function () {
-  console.log('MongoDB disconnected.');
+  debug('MongoDB disconnected.');
 }).on('error', function (err) {
-  console.log('MongoDB error: ' + err);
+  debug('MongoDB error: ' + err);
 });
 
 // configure process listener
 process.on('SIGINT', function () {
   mongoose.connection.close(function () {
-    console.log('MongoDB disconnected through app termination');
+    debug('MongoDB disconnected through app termination');
     process.exit(0);
   });
 });
