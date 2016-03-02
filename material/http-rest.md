@@ -77,3 +77,11 @@ Sempre que entramos em web-site pelo nosso navegador o mesmo efetua uma operaç�
 ### HEAD
 
 O método **HEAD** é uma variação do método GET onde o body da resposta não é retornada, ou seja, serve para a verificação dos cabeçalhos e do status code retornado pelo servidor. Pode ser utilizado para a validação de um determinado recurso, por exemplo, se um determinado cliente existe.
+
+### POST
+
+O método **POST** serve para o processamento de uma determinada ação e dentre bem como a inclusão de novos registros.
+
+Por exemplo, ao efetuarmos um POST sobre a URI **http://www.minhaapi.com.br/v1/cliente** um novo cliente será *"inserido"* na base de dados.
+
+Este método não é considerado **"Seguro"** uma vez que o mesmo cria ou computa ações sobre recursos do servidor.
