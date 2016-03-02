@@ -1,4 +1,4 @@
-# Fumções em JavaScript
+# Funções em JavaScript
 
 Funções em JavaScript são de primeira classe, ou seja, podem ser atribuidas a variáveis, passadas por parâmetro e retornadas por outras funções.
 

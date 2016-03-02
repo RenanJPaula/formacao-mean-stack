@@ -21,3 +21,5 @@ Todos os materiais utilizados durante o curso serão disponibilizados neste repo
   - [Prototype](./material/javascript-prototype.md);
 
 - [MongoDB](./material/mongodb.md);
+
+- [HTTP e REST](./material/http-rest.md);

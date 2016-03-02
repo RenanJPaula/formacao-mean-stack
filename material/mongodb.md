@@ -91,7 +91,7 @@ Exemplo:
 
 ### Materual
 
-Para fins didáticos utilizaremos como material do curso o próprio [manual do mongo](https://docs.mongodb.org/manual/) uma vez que a mesma é bem completa e didática.
+Para fins didáticos utilizaremos como material do curso o próprio [manual do mongo](https://docs.mongodb.org/manual/) uma vez que o mesmo é bem completo e didático.
 
 ## Saiba mais
 
