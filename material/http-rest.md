@@ -85,3 +85,21 @@ O método **POST** serve para o processamento de uma determinada ação e dentre
 Por exemplo, ao efetuarmos um POST sobre a URI **http://www.minhaapi.com.br/v1/cliente** um novo cliente será *"inserido"* na base de dados.
 
 Este método não é considerado **"Seguro"** uma vez que o mesmo cria ou computa ações sobre recursos do servidor.
+
+### PUT
+
+O método **PUT** tem por objetivo alterar um determinado recurso do servidor. Por exemplo, ao efetuar um PUT sobre a URI **http://www.minhaapi.com.br/v1/cliente/10** o cliente cujo ID 10, especificado na URL, será alterado mediante as informações passadas no body.
+
+### DELETE
+
+O método **DELETE** tem por objetivo excluir um determinado recurso do servidor. Por exemplo, ao efetuar um DELETE sobre a URI **http://www.minhaapi.com.br/v1/cliente/10** o cliente cujo ID 10, especificado na URL, será excluído.
+
+O método DELETE não permite o envio de body.
+
+### TRACE
+
+Ecoa o pedido, de maneira que o cliente possa saber o que os servidores intermediários estão mudando em sua requisição.
+
+### CONNECT
+
+Serve para uso com um proxy que possa se tornar um túnel SSL (um túnel pode ser usado, por exemplo, para criar uma conexão segura).
