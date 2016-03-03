@@ -155,4 +155,4 @@ Existem diversas características sobre o protocolo HTTP e sobre o REST propriam
 
 A seguir encontra-se uma lista de materiais relacionados e indicados para o estudo:
 
-- (rfc2616)[https://tools.ietf.org/html/rfc2616]
+- [RFC2616](https://tools.ietf.org/html/rfc2616);
