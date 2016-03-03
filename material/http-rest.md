@@ -103,3 +103,25 @@ Ecoa o pedido, de maneira que o cliente possa saber o que os servidores intermed
 ### CONNECT
 
 Serve para uso com um proxy que possa se tornar um túnel SSL (um túnel pode ser usado, por exemplo, para criar uma conexão segura).
+
+## Response
+
+Para cada requisição há uma resposta por parte do host (servidor). As respostas são parecidas com as requisições e possuem uma linha inicial (status-line), cabeçalho (response header) bem como um possível body.
+
+A status line é composta pela versão do protocolo HTTP, um código de status (status-code) da resposta, e uma descrição do código do status (reason-phrase).
+
+O **Status-Code** indica qual o resultado obtido após a computação da requisição. Os status são divididos em famílias e cada família possui uma semântica própria.
+
+Dentre as famílias estão:
+
+| Família | Resultado |
+| ---------- | ------------- |
+| 1xx | Informativo |
+| 2xx | Sucesso |
+| 3xx | Redirecionamento |
+| 4xx | Erro de cliente |
+| 5xx | Outros erros |
+
+Exemplos:
+- Se uma requisição retornar **200** como status code significa que tudo foi computado devidamente.
+- Se uma requisição retornar **404** quer dizer que o recurso especificado pelo cliente não for encontrado.
