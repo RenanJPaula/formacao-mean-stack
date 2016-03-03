@@ -125,3 +125,4 @@ Dentre as famílias estão:
 Exemplos:
 - Se uma requisição retornar **200** como status code significa que tudo foi computado devidamente.
 - Se uma requisição retornar **404** quer dizer que o recurso especificado pelo cliente não for encontrado.
+- Se uma requisição retornar **500** quer dizer que um erro inesperado aconteceu no servidor.
