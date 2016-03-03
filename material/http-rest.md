@@ -105,6 +105,33 @@ Ecoa o pedido, de maneira que o cliente possa saber o que os servidores intermed
 
 Serve para uso com um proxy que possa se tornar um túnel SSL (um túnel pode ser usado, por exemplo, para criar uma conexão segura).
 
+### Passagem de parâmetros e informações
+
+Existem diversas formas de passarmos parâmetros e informações para o servidor. Abaixo entenderemos cada uma delas e sua utilização adequada.
+
+1- URI
+Podemos enviar parâmetros para o servidor na composição das URIs.
+
+Por exemplo, enviar o identificador de um determinado recurso: **http://www.minhaapi.com.br/v1/cliente/10**.
+
+2- Query String
+Ao compormos nossa URL podemos passar parâmetros através da Query String. Por exemplo, podemos solicitar através de um GET todos os clientes cujo nome é "Renan" e idade de 24 anos: **http://www.minhaapi.com.br/v1/clientes?nome=Renan&idade=24**.
+
+Reparem que a query começa a partir do **"?"** e que os parâmetros são especificados através de chave valor e separados por **"&"**.
+
+OBS: O conceito fundamental em utilizar a URI e URL para passarmos parâmetros é a ideia de ao copiarmos a URL em outro navegador, ou enviarmos para um amigo, o mesmo recurso será recuperado.
+
+3- Header
+A ideia de se utilizar o header para passagem de parâmetros é a de enviar metadados sobre a nossa requisição bem como informações únicas como o token de autenticação.
+
+Por exemplo, enviar o tipo de dado que aceito como resposta.
+
+4- Body
+Em alguns métodos o body não está disponível, entretanto o objetivo dele é receber os dados a serem computados durante a requisição.
+
+Por exemplo, ao realizarmos um PUT na URI **"http://www.minhaapi.com.br/v1/cliente/10"** o body deve conter as informações a serem alteradas do recurso.
+
+
 ### Response
 
 Para cada requisição há uma resposta por parte do host (servidor). As respostas são parecidas com as requisições e possuem uma linha inicial (status-line), cabeçalho (response header) bem como um possível body.
