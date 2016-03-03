@@ -127,3 +127,24 @@ Exemplos:
 - Se uma requisição retornar **200** como status code significa que tudo foi computado devidamente.
 - Se uma requisição retornar **404** quer dizer que o recurso especificado pelo cliente não for encontrado.
 - Se uma requisição retornar **500** quer dizer que um erro inesperado aconteceu no servidor.
+
+## REST
+
+O REST (Transferência de Estado Representacional) é um conjunto de princípios arquiteturais que tem por objetivo a criação de APIs semânticas e padronizadas, aproveitando as funcionalidades disponíveis no protocolo HTTP.
+
+Parece meio óbvio utilizar as funcionalidades disponíveis no protocolo entretanto a grande maioria das pessoas não conhecem bem o suficiente o protocolo e acabam utilizando o mesmo de forma inadequada.
+
+Exemplos clássicos do mau uso do protocolo:
+- Métodos get que alteram o estado do servidor;
+- Despropanização do aceso aos recursos;
+- Utilização do POST para a execução de todos os tipos de operações;
+- Utilização incorreta dos códigos de status;
+
+O REST vem frisar os recursos disponíveis no protocolo HTTP e nos auxiliar com a especificação de um conjunto de princípios, listados abaixo, para a criação APIS padronizadas e semânticas.
+
+### Princípios
+
+- Manter a comunicação cliente-servidor livre de estado, ou seja, as requisições http devem conter todos os insumos necessários para o processamento da mesma. Em outras palavras evite a utilização de sessão.
+- Utilização adequada dos métodos suportados pelo protocolo HTTP. Exemplo: dado um determinado recurso, como **http://www.minhaapi.com.br/v1/cliente/** implicitamente sabemos que se fizermos um post sobre ele estaríamos inserção de um novo cliente passado no body; Se executarmos um GET em **http://www.minhaapi.com.br/v1/cliente/10** o resultado esperado é a obtenção do cliente cujo id é 10 e assim por diante.
+- Padronização da identificação dos recursos, como **"/cliente"**, **"/usuário"** etc.
+- Utilização de hipermídia para interligar as operações. Exemplo, ao inserirmos um cliente, retornas no corpo da mensagem um link para a consulta do cliente inserido, como por exemplo **http://www.minhaapi.com.br/v1/cliente/11** onde o id 11 foi gerado pela inserção do recurso.
