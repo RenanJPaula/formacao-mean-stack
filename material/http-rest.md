@@ -144,7 +144,15 @@ O REST vem frisar os recursos disponíveis no protocolo HTTP e nos auxiliar com 
 
 ### Princípios
 
-- Manter a comunicação cliente-servidor livre de estado, ou seja, as requisições http devem conter todos os insumos necessários para o processamento da mesma. Em outras palavras evite a utilização de sessão.
+- Manter a comunicação cliente-servidor livre de estado, ou seja, as requisições http devem conter todos os insumos necessários para o processamento da mesma. Em outras palavras evite ao máximo a utilização de sessão.
 - Utilização adequada dos métodos suportados pelo protocolo HTTP. Exemplo: dado um determinado recurso, como **http://www.minhaapi.com.br/v1/cliente/** implicitamente sabemos que se fizermos um post sobre ele estaríamos inserção de um novo cliente passado no body; Se executarmos um GET em **http://www.minhaapi.com.br/v1/cliente/10** o resultado esperado é a obtenção do cliente cujo id é 10 e assim por diante.
 - Padronização da identificação dos recursos, como **"/cliente"**, **"/usuário"** etc.
 - Utilização de hipermídia para interligar as operações. Exemplo, ao inserirmos um cliente, retornas no corpo da mensagem um link para a consulta do cliente inserido, como por exemplo **http://www.minhaapi.com.br/v1/cliente/11** onde o id 11 foi gerado pela inserção do recurso.
+
+## Conclusão
+
+Existem diversas características sobre o protocolo HTTP e sobre o REST propriamente dito que não foram abordados neste artigo, entretanto com os conceitos abordados não temos mais desculpas para negligenciarmos nossas aplicações.
+
+A seguir encontra-se uma lista de materiais relacionados e indicados para o estudo:
+
+- (rfc2616)[https://tools.ietf.org/html/rfc2616]
