@@ -6,7 +6,7 @@ O protocolo HTTP (Hypertext Transfer Protocol), como o próprio nome diz, é um 
 
 Basicamente ele funciona através de Requisições (Request) por parte dos clientes e Respostas (Response) por parte do servidor.
 
-As requisições e suas respectivas respostas segue os padrões definidos na (RFC2616)[https://tools.ietf.org/html/rfc2616].
+As requisições e suas respectivas respostas segue os padrões definidos na [RFC2616](https://tools.ietf.org/html/rfc2616).
 
 Mais especificamente as requisições possuem o seguinte padrão:
 
