@@ -2,7 +2,7 @@
 
 ## HTTP
 
-O protocolo HTTP (Hypertext Transfer Protocol), como o próprio nome diz, é um protocolo de comunicação entre cliente e servidor amplamente utilizado.
+O protocolo HTTP (Hypertext Transfer Protocol) é um protocolo de comunicação entre cliente e servidor.
 
 Basicamente ele funciona através de Requisições (Request) por parte dos clientes e Respostas (Response) por parte do servidor.
 
