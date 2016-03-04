@@ -95,7 +95,6 @@ O método **PUT** tem por objetivo alterar um determinado recurso do servidor. P
 
 O método **DELETE** tem por objetivo excluir um determinado recurso do servidor. Por exemplo, ao efetuar um DELETE sobre a URI **http://www.minhaapi.com.br/v1/cliente/10** o cliente cujo ID 10, especificado na URL, será excluído.
 
-O método DELETE não permite o envio de body.
 
 #### TRACE
 
