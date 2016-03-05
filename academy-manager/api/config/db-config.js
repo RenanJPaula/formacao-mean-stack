@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose')
   , env = require('./env-config')
-  , debug = require('debug')(env.appName + ':db');
+  , debug = require('./debug-config')('db');
 
 // configure a mongoose connection
 mongoose.connect(env.db.uri, env.db.credentials);

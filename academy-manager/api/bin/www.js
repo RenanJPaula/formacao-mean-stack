@@ -3,7 +3,7 @@
 var http = require('http')
   , app = require('../app')
   , env = require('../config/env-config')
-  , debug = require('debug')(env.appName + ':http');
+  , debug = require('../config/debug-config')('http');
 
 // Criamos o servidor http com o gerenciador de rotas do nosso app
 var httpServer = http.createServer(app);
