@@ -8,5 +8,5 @@ module.exports = function CreateCustonDebug(module) {
 
   return function sendMessage(message) {
     _custonDebug(message);
-  }
+  };
 };

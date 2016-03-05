@@ -26,7 +26,7 @@ ctrl.findById = function(req, res) {
 ctrl.save = function(req, res) {
   Student.save(req.body)
     .then(function(student) {
-      res.status(200).json(student);
+      res.status(200).json(req.getMessage('student-success-inserted'));
     })
     .catch(function(err) {
       res.status(500).send(err);

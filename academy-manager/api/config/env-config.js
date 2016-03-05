@@ -4,6 +4,8 @@ var env = {
   appName: 'academy-manager',
   version: 'v1',
   port: process.env.API_PORT || 3000,
+  defaultLocale: 'en',
+  defaultMessage: 'unespected-error',
   db: {
     uri: process.env.DB_URI || 'mongodb://localhost/school',
     credentials: {
