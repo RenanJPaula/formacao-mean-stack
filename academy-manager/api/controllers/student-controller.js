@@ -1,12 +1,13 @@
 'use strict';
 
 var Student = require('../models/student-model')
+  , success = require('../models/success-response-model')
   , ctrl = {};
 
 ctrl.findAll = function(req, res) {
   Student.findAll()
     .then(function(students) {
-      res.status(200).json(students);
+      new success.FindMany(students).send(req, res);
     })
     .catch(function(err) {
       res.status(500).send(err);
@@ -16,7 +17,7 @@ ctrl.findAll = function(req, res) {
 ctrl.findById = function(req, res) {
   Student.findById(req.params.id)
     .then(function(student) {
-      res.status(200).json(student);
+      new success.FindOne(student).send(req, res);
     })
     .catch(function(err) {
       res.status(404).send(err);
@@ -26,7 +27,7 @@ ctrl.findById = function(req, res) {
 ctrl.save = function(req, res) {
   Student.save(req.body)
     .then(function(student) {
-      res.status(200).json(req.getMessage('student-success-inserted'));
+      new success.Inserted(student._id).send(req, res);
     })
     .catch(function(err) {
       res.status(500).send(err);
@@ -39,7 +40,7 @@ ctrl.update = function(req, res) {
 
   Student.update(student)
     .then(function(data) {
-      res.status(200).json(data);
+      new success.Updated(student._id).send(req, res);
     })
     .catch(function(err) {
       res.status(500).send(err);
@@ -49,7 +50,7 @@ ctrl.update = function(req, res) {
 ctrl.remove = function(req, res) {
   Student.remove(req.params.id)
     .then(function(data) {
-      res.status(200).json(data);
+      new success.Removed().send(req, res);
     })
     .catch(function(err) {
       res.status(500).send(err);

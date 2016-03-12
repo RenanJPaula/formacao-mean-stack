@@ -15,6 +15,7 @@
   "author": "Renan Johannsen de Paula",
   "license": "ISC",
   "dependencies": {
+    "basic-auth": "^1.0.3",
     "body-parser": "^1.15.0",
     "debug": "^2.2.0",
     "express": "^4.13.4",

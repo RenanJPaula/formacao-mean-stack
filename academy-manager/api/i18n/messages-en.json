@@ -1,4 +1,6 @@
 {
   "unespected-error": "Unexpected error! Please try again later."
-, "student-success-inserted": "User successfully added!"
+, "record-success-inserted": "Record successfully added!"
+, "record-success-updated": "Record successfully updated!"
+, "record-success-removed": "Record successfully removed!"
 }

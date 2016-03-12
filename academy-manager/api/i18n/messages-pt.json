@@ -1,4 +1,6 @@
 {
   "unespected-error": "Erro inesperado! Por favor, tente novamente mais tarde."
-, "student-success-inserted": "Usuário inserido com sucesso!"
+, "record-success-inserted": "Registro inserido com sucesso!"
+, "record-success-updated": "Registro atualizado com sucesso!"
+, "record-success-removed": "Registro removido com sucesso!"
 }
