@@ -23,3 +23,13 @@ Todos os materiais utilizados durante o curso serão disponibilizados neste repo
 - [MongoDB](./material/mongodb.md);
 
 - [HTTP e REST](./material/http-rest.md);
+
+## Contato do instrutor:
+
+Renan Johannsen de Paula:
+- [Facebook](https://www.facebook.com/RenanJPaula);
+- [Linkedin](https://br.linkedin.com/in/renanjpaula);
+- [Github](https://github.com/RenanJPaula/);
+- [Youtube](https://www.youtube.com/channel/UCw81rZlOnkPt_aEmjwTfERQ);
+- E-mail Pessoal: renanjohannsen@gmail.com;
+- E-mail Corporativo: renanjpaula@brainmachine.io;
