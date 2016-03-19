@@ -11,6 +11,7 @@ Abaixo segue algumas questões sobre JavaScript:
 - Qual a diferença entre function expression e function declaration?
 - Quais as formas de invocação de uma determinada função?
 - O que é callback e qual o seu objetvo?
+- O que é closure?
 - O que é hoisting?
 - O que é global namespace e como podemos isolar escopos para evitar conflitos?
 - Qual a estrutura que nos permite simular uma "Classe Java" e como instanciamos objetos a partir desta estrutura?
