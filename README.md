@@ -24,6 +24,8 @@ Todos os materiais utilizados durante o curso serão disponibilizados neste repo
 
 - [HTTP e REST](./material/http-rest.md);
 
+- [Avaliação do conhecimento (backend)](./material/avaliação-backend.md);
+
 ## Contato do instrutor:
 
 Renan Johannsen de Paula:
