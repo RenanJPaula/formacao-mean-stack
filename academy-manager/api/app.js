@@ -3,6 +3,7 @@
 var db = require('./config/db-config')
   , express = require('express')
   , bodyParser = require('body-parser')
+  , cors = require('cors')
   , app = express()
   , routeConfig = require('./config/route-config')
   , i18n = require('./filters/i18n-filter')
@@ -11,9 +12,11 @@ var db = require('./config/db-config')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(cors());
+
 app.use(i18n);
 
-app.use(basicAuth);
+// app.use(basicAuth);
 
 routeConfig.configApiRoutes(app);
 

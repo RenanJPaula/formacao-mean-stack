@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="am">
+  <head>
+    <meta charset="utf-8">
+    <title>Academy Manager</title>
+  </head>
+  <body>
+
+    <div ng-controller="StudentCtrl">
+      <h1>{{ student._id ? 'Edit' : 'Add' }} Student</h1>
+
+      <ul>
+        <li ng-repeat="message in messages">
+          {{ message }}
+        </li>
+      </ul>
+
+      <form>
+        <label for="name">Nome:</label>
+        <input type="text" ng-model="student.name">
+        <br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" ng-model="student.cpf">
+        <br>
+
+        <label for="rg">RG:</label>
+        <input type="text" ng-model="student.rg">
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="text" ng-model="student.email">
+        <br>
+
+        <br>
+        <input type="button" value="Save" ng-click="save()">
+        <br>
+      </form>
+
+      <table ng-init="loadList()">
+        <tr>
+          <th>Name</th>
+          <th>RG</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+
+        <tr ng-repeat="student in students">
+          <td>{{ student.name }}</td>
+          <td>{{ student.rg }}</td>
+          <td>{{ student.email }}</td>
+          <td>
+            <button type="button" name="Edit" ng-click="load(student)">Edit</button>
+            <button type="button" name="Remove" ng-click="remove(student)">Remove</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+  </body>
+</html>
