@@ -8,48 +8,48 @@
   function factory($http, $q, api) {
     var svc = {};
 
-    function resolveRequest(promise, resolve, reject) {
-      promise
-        .success(function(res) {
-          resolve(res);
+    function defaultRequestCallback(request, resolve, reject) {
+      request
+        .success(function(resp) {
+          resolve(resp);
         })
-        .error(function(res) {
-          reject(res);
+        .error(function(resp) {
+          reject(resp);
         });
     }
 
     svc.getAll = function() {
       return $q(function(resolve, reject) {
-        var promise = $http.get(api.student);
-        resolveRequest(promise, resolve, reject);
+        var request = $http.get(api.students);
+        defaultRequestCallback(request, resolve, reject);
       });
     };
 
     svc.getById = function(id) {
       return $q(function(resolve, reject) {
-        var promise = $http.get(api.student + id);
-        resolveRequest(promise, resolve, reject);
+        var request = $http.get(api.students + id);
+        defaultRequestCallback(request, resolve, reject);
       });
     };
 
     svc.save = function(student) {
       return $q(function(resolve, reject) {
-        var promise = null;
+        var request = null;
 
-        if(student && student._id) {
-          promise = $http.put(api.student + student._id, student);
+        if(student._id) {
+          request = $http.put(api.students + student._id, student);
         } else {
-          promise = $http.post(api.student, student);
+          request = $http.post(api.students, student);
         }
 
-        resolveRequest(promise, resolve, reject);
+        defaultRequestCallback(request, resolve, reject);
       });
     };
 
     svc.remove = function(id) {
       return $q(function(resolve, reject) {
-        var promise = $http.delete(api.student + id);
-        resolveRequest(promise, resolve, reject);
+        var request = $http.delete(api.students + id);
+        defaultRequestCallback(request, resolve, reject);
       });
     };
 

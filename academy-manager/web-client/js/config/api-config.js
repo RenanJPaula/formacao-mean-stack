@@ -3,11 +3,11 @@
 
   var BASE_API_PATH = 'http://localhost:3000/api/v1/'
     , api = {
-        basePath: BASE_API_PATH
-      , student: buildResourceURI('students')
+        students: buildResourceUri('students')
+      , course: buildResourceUri('course')
       };
 
-  function buildResourceURI(name) {
+  function buildResourceUri(name) {
     return BASE_API_PATH + name + '/';
   }
 
