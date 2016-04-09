@@ -6,38 +6,38 @@
   </head>
   <body>
 
-    <div ng-controller="StudentCtrl">
-      <h1>{{ student._id ? 'Edit' : 'Add' }} Student</h1>
+    <div ng-controller="StudentCtrl as ctrl">
+      <h1>{{ ctrl.student._id ? 'Edit' : 'Add' }} Student</h1>
 
       <ul>
-        <li ng-repeat="message in messages">
+        <li ng-repeat="message in ctrl.messages">
           {{ message }}
         </li>
       </ul>
 
       <form>
         <label for="name">Nome:</label>
-        <input type="text" ng-model="student.name">
+        <input type="text" ng-model="ctrl.student.name">
         <br>
 
         <label for="cpf">CPF:</label>
-        <input type="text" ng-model="student.cpf">
+        <input type="text" ng-model="ctrl.student.cpf">
         <br>
 
         <label for="rg">RG:</label>
-        <input type="text" ng-model="student.rg">
+        <input type="text" ng-model="ctrl.student.rg">
         <br>
 
         <label for="email">Email:</label>
-        <input type="text" ng-model="student.email">
+        <input type="text" ng-model="ctrl.student.email">
         <br>
 
         <br>
-        <input type="button" value="Save" ng-click="save()">
+        <input type="button" value="Save" ng-click="ctrl.save()">
         <br>
       </form>
 
-      <table ng-init="loadList()">
+      <table ng-init="ctrl.loadList()">
         <tr>
           <th>Name</th>
           <th>RG</th>
@@ -45,13 +45,13 @@
           <th>Actions</th>
         </tr>
 
-        <tr ng-repeat="student in students">
+        <tr ng-repeat="student in ctrl.students">
           <td>{{ student.name }}</td>
           <td>{{ student.rg }}</td>
           <td>{{ student.email }}</td>
           <td>
-            <button type="button" name="Edit" ng-click="load(student)">Edit</button>
-            <button type="button" name="Remove" ng-click="remove(student)">Remove</button>
+            <button type="button" name="Edit" ng-click="ctrl.load(student)">Edit</button>
+            <button type="button" name="Remove" ng-click="ctrl.remove(student)">Remove</button>
           </td>
         </tr>
       </table>

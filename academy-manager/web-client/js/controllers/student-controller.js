@@ -3,48 +3,49 @@
 
   angular.module('am').controller('StudentCtrl', controller);
 
-  controller.$inject = ['$scope', '$http', 'StudentService'];
+  controller.$inject = ['$http', 'StudentService'];
 
-  function controller($scope, $http, studentService) {
+  function controller($http, studentService) {
+    var ctrl = this;
 
-    $scope.save = function() {
-      studentService.save($scope.student)
+    ctrl.save = function() {
+      studentService.save(ctrl.student)
         .then(function(res) {
-          $scope.messages = res.messages;
-          $scope.loadList();
-          $scope.student = {};
+          ctrl.messages = res.messages;
+          ctrl.loadList();
+          ctrl.student = {};
         })
         .catch(function(res) {
           console.log(res);
         });
     };
 
-    $scope.loadList = function() {
+    ctrl.loadList = function() {
       studentService.getAll()
         .then(function(res) {
-          $scope.students = res.data;
+          ctrl.students = res.data;
         })
         .catch(function(res) {
           console.log(res);
         });
     };
 
-    $scope.load = function(student) {
+    ctrl.load = function(student) {
       studentService.getById(student._id)
         .then(function(res) {
-          $scope.student = res.data;
+          ctrl.student = res.data;
         })
         .catch(function(res) {
           console.log(res);
         });
     };
 
-    $scope.remove = function(student) {
+    ctrl.remove = function(student) {
       studentService.remove(student._id)
         .then(function(res) {
-          $scope.messages = res.messages;
-          $scope.loadList();
-          $scope.student = {};
+          ctrl.messages = res.messages;
+          ctrl.loadList();
+          ctrl.student = {};
         })
         .catch(function(res) {
           console.log(res);
