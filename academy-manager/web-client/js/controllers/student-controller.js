@@ -1,10 +1,14 @@
 (function(angular) {
   'use strict';
 
-  angular.module('am').controller('StudentCtrl', function($scope, $http, StudentService) {
+  angular.module('am').controller('StudentCtrl', controller);
+
+  controller.$inject = ['$scope', '$http', 'StudentService'];
+
+  function controller($scope, $http, studentService) {
 
     $scope.save = function() {
-      StudentService.save($scope.student)
+      studentService.save($scope.student)
         .then(function(res) {
           $scope.messages = res.messages;
           $scope.loadList();
@@ -16,7 +20,7 @@
     };
 
     $scope.loadList = function() {
-      StudentService.getAll()
+      studentService.getAll()
         .then(function(res) {
           $scope.students = res.data;
         })
@@ -26,7 +30,7 @@
     };
 
     $scope.load = function(student) {
-      StudentService.getById(student._id)
+      studentService.getById(student._id)
         .then(function(res) {
           $scope.student = res.data;
         })
@@ -36,7 +40,7 @@
     };
 
     $scope.remove = function(student) {
-      StudentService.remove(student._id)
+      studentService.remove(student._id)
         .then(function(res) {
           $scope.messages = res.messages;
           $scope.loadList();
@@ -47,6 +51,6 @@
         });
     };
 
-  });
+  }
 
 })(angular);

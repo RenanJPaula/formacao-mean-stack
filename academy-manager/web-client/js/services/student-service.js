@@ -1,7 +1,11 @@
 (function(angular) {
   'use strict';
 
-  angular.module('am').factory('StudentService', function($http, $q, api) {
+  angular.module('am').factory('StudentService', factory);
+
+  factory.$inject = ['$http', '$q', 'api'];
+
+  function factory($http, $q, api) {
     var svc = {};
 
     function resolveRequest(promise, resolve, reject) {
@@ -50,6 +54,6 @@
     };
 
     return svc;
-  });
+  }
 
 })(angular);
