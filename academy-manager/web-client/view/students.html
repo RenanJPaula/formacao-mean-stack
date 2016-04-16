@@ -1,0 +1,48 @@
+<h1>{{ studentCtrl.student._id ? 'Edit' : 'Add' }} Student</h1>
+
+<ul>
+  <li ng-repeat="message in studentCtrl.messages">
+    {{ message }}
+  </li>
+</ul>
+
+<form>
+  <label for="name">Nome:</label>
+  <input type="text" ng-model="studentCtrl.student.name">
+  <br>
+
+  <label for="cpf">CPF:</label>
+  <input type="text" ng-model="studentCtrl.student.cpf">
+  <br>
+
+  <label for="rg">RG:</label>
+  <input type="text" ng-model="studentCtrl.student.rg">
+  <br>
+
+  <label for="email">Email:</label>
+  <input type="text" ng-model="studentCtrl.student.email">
+  <br>
+
+  <br>
+  <input type="button" value="Save" ng-click="studentCtrl.save()">
+  <br>
+</form>
+
+<table ng-init="studentCtrl.loadList()">
+  <tr>
+    <th>Name</th>
+    <th>RG</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr ng-repeat="student in studentCtrl.students">
+    <td>{{ student.name }}</td>
+    <td>{{ student.rg }}</td>
+    <td>{{ student.email }}</td>
+    <td>
+      <button type="button" name="Edit" ng-click="studentCtrl.load(student)">Edit</button>
+      <button type="button" name="Remove" ng-click="studentCtrl.remove(student)">Remove</button>
+    </td>
+  </tr>
+</table>

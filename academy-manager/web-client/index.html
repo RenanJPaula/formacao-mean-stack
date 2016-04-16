@@ -2,68 +2,62 @@
 <html ng-app="am">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Academy Manager</title>
+
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
   </head>
   <body>
 
-    <div ng-controller="StudentCtrl as ctrl">
-      <h1>{{ ctrl.student._id ? 'Edit' : 'Add' }} Student</h1>
+    <header>
+      <nav ng-controller="MenuCtrl as menuCtrl" ng-init="menuCtrl.init()">
 
-      <ul>
-        <li ng-repeat="message in ctrl.messages">
-          {{ message }}
-        </li>
-      </ul>
+        <md-content>
+          <md-toolbar>
+            <div class="md-toolbar-tools">
+              <md-button class="md-icon-button" aria-label="Menu" ng-click="menuCtrl.openMenu()">
+                <md-icon md-svg-icon="navigation:menu"></md-icon>
+              </md-button>
 
-      <form>
-        <label for="name">Nome:</label>
-        <input type="text" ng-model="ctrl.student.name">
-        <br>
+              <h2>Academy Manager</h2>
+            </div>
+          </md-toolbar>
+        </md-content>
 
-        <label for="cpf">CPF:</label>
-        <input type="text" ng-model="ctrl.student.cpf">
-        <br>
+        <md-sidenav class="md-sidenav-left" md-component-id="menu">
 
-        <label for="rg">RG:</label>
-        <input type="text" ng-model="ctrl.student.rg">
-        <br>
+          <md-list ng-repeat="menu in menuCtrl.menus">
+            <md-subheader class="md-no-sticky">{{menu.name}}</md-subheader>
 
-        <label for="email">Email:</label>
-        <input type="text" ng-model="ctrl.student.email">
-        <br>
+            <md-list-item ng-repeat="item in menu.itens" ng-click="menuCtrl.navigateTo(item.path)">
+              <md-icon md-svg-icon="{{item.icon}}"></md-icon>
+              <p>{{item.name}}</p>
+            </md-list-item>
+          </md-list>
 
-        <br>
-        <input type="button" value="Save" ng-click="ctrl.save()">
-        <br>
-      </form>
+        </md-sidenav>
+      </nav>
+    </header>
 
-      <table ng-init="ctrl.loadList()">
-        <tr>
-          <th>Name</th>
-          <th>RG</th>
-          <th>Email</th>
-          <th>Actions</th>
-        </tr>
+    <main ng-view="">
+      <!-- CONTENT HERE! -->
+    </main>
 
-        <tr ng-repeat="student in ctrl.students">
-          <td>{{ student.name }}</td>
-          <td>{{ student.rg }}</td>
-          <td>{{ student.email }}</td>
-          <td>
-            <button type="button" name="Edit" ng-click="ctrl.load(student)">Edit</button>
-            <button type="button" name="Remove" ng-click="ctrl.remove(student)">Remove</button>
-          </td>
-        </tr>
-      </table>
-    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
     <script src="/js/app.js"></script>
-
     <script src="/js/config/api-config.js"></script>
-
+    <script src="/js/config/route-config.js"></script>
+    <script src="/js/config/icon-config.js"></script>
     <script src="/js/services/student-service.js"></script>
-
+    <script src="/js/controllers/menu-controller.js"></script>
     <script src="/js/controllers/student-controller.js"></script>
   </body>
 </html>
