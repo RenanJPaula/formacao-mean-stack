@@ -23,7 +23,7 @@
     ctrl.loadList = function() {
       studentService.getAll()
         .then(function(res) {
-          ctrl.students = res.data;
+          ctrl.students = res.data.slice(0, 10);
         })
         .catch(function(res) {
           console.log(res);
