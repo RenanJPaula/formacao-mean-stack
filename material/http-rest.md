@@ -6,13 +6,13 @@ O protocolo HTTP (Hypertext Transfer Protocol) é um protocolo de comunicação 
 
 Basicamente ele funciona através de Requisições (Request) por parte dos clientes e Respostas (Response) por parte do servidor.
 
-As requisições e suas respectivas respostas segue os padrões definidos na [RFC2616](https://tools.ietf.org/html/rfc2616).
+As requisições e suas respectivas respostas seguem os padrões definidos na [RFC2616](https://tools.ietf.org/html/rfc2616).
 
 Mais especificamente as requisições possuem o seguinte padrão:
 
 ### Linha inicial (request line)
 
-A linha inicial é composta de três partes, separadas por espaço, que especificam a o método a ser executado, a identificação do recurso (URI) e a versão do protocolo utilizada.
+A linha inicial é composta de três partes, separadas por espaço, que especificam o método a ser executado, a identificação do recurso (URI) e a versão do protocolo utilizada.
 
 Exemplo:
 
@@ -35,11 +35,11 @@ Accept-Language: pt
 Content-Type: application/json; charset=utf-8
 ```
 
-O header basicamente detalha os metadados da request.
+O header basicamente detalha os metadados da requisição.
 
 ### Corpo da requisição (request body)
 
-Alguns métodos do protocolo http permitem o envio de dados para o servidor através do body da requisição.
+Alguns métodos do protocolo HTTP permitem o envio de dados para o servidor através do body da requisição.
 
 É obrigatório a inserção de uma linha em branco entre o header e o body.
 
@@ -59,13 +59,13 @@ Content-Length: 39
 
 Os métodos de uma requisição indicam a ação a ser realizada sobre um determinado recurso.
 
-Abaixo estão listados os oito métodos suportados pelo protocolo bem como o seus respectivos objetivos:
+Abaixo estão listados os oito métodos suportados pelo protocolo, bem como o seus respectivos objetivos:
 
 #### OPTIONS
 
 O método **OPTIONS** consulta os métodos suportados para um determinado recurso do servidor, ou seja, retorna a lista de operações aceitas sobre um determinado recurso.
 
-Este método é muito útil pois pode ser utilizado e explorado pelos desenvolvedores na construção de robos e na documentação de APIS.
+Este método é muito útil pois pode ser utilizado e explorado pelos desenvolvedores na construção de robos e na documentação de APIs.
 
 #### GET
 
@@ -73,7 +73,7 @@ O método **GET**, como o nome já diz, tem por objetivo a obtenção de um dete
 
 O método GET é considerado um método **"seguro"**, pois semanticamente esta operação serve apenas para consultas, ou seja, o recurso consultado não sofre alteração. Dado a esta característica o método GET não permite o envio de um body na requisição, pois nenhum dado será inserido ou alterado.
 
-Sempre que entramos em web-site pelo nosso navegador o mesmo efetua uma operação de GET para a obtenção do HTML a ser exibido.
+Sempre que entramos em um website pelo nosso navegador o mesmo efetua uma operação de GET para a obtenção do HTML a ser exibido.
 
 #### HEAD
 
