@@ -1,48 +1,24 @@
-<h1>{{ studentCtrl.student._id ? 'Edit' : 'Add' }} Student</h1>
+<div layout="row" layout-wrap>
+  <div flex="grow">
+    <h3>Students</h3>
+  </div>
+</div>
 
-<ul>
-  <li ng-repeat="message in studentCtrl.messages">
-    {{ message }}
-  </li>
-</ul>
+<md-content layout-padding class="md-whiteframe-1dp">
+  <md-list ng-init="studentsCtrl.loadList()">
+    <md-list-item class="md-2-line" ng-repeat="student in studentsCtrl.students">
+      <img ng-src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/12295463_894166364011842_1297552435546330753_n.jpg?oh=b2b5c891a2ed1483f6fb7750f9f490e0&oe=57ADB685&__gda__=1472000829_72a3c51cb8000e02dbe2d729834b4c86"
+          class="md-avatar" alt="Avatar" />
+      <div class="md-list-item-text" layout="column">
+        <h4>{{ student.name }}</h4>
+        <p>{{ student.email }}</p>
+      </div>
+    </md-list-item>
+  </md-list>
 
-<form>
-  <label for="name">Nome:</label>
-  <input type="text" ng-model="studentCtrl.student.name">
-  <br>
-
-  <label for="cpf">CPF:</label>
-  <input type="text" ng-model="studentCtrl.student.cpf">
-  <br>
-
-  <label for="rg">RG:</label>
-  <input type="text" ng-model="studentCtrl.student.rg">
-  <br>
-
-  <label for="email">Email:</label>
-  <input type="text" ng-model="studentCtrl.student.email">
-  <br>
-
-  <br>
-  <input type="button" value="Save" ng-click="studentCtrl.save()">
-  <br>
-</form>
-
-<table ng-init="studentCtrl.loadList()">
-  <tr>
-    <th>Name</th>
-    <th>RG</th>
-    <th>Email</th>
-    <th>Actions</th>
-  </tr>
-
-  <tr ng-repeat="student in studentCtrl.students">
-    <td>{{ student.name }}</td>
-    <td>{{ student.rg }}</td>
-    <td>{{ student.email }}</td>
-    <td>
-      <button type="button" name="Edit" ng-click="studentCtrl.load(student)">Edit</button>
-      <button type="button" name="Remove" ng-click="studentCtrl.remove(student)">Remove</button>
-    </td>
-  </tr>
-</table>
+  <div layout="row">
+    <md-button class="md-fab md-fab-bottom-right" aria-label="New">
+      <md-icon md-svg-src="content:add"></md-icon>
+    </md-button>
+  </div>
+</md-content>

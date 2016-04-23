@@ -1,0 +1,37 @@
+<div layout="row" layout-wrap>
+  <div flex="grow">
+    <h3>Student</h3>
+  </div>
+</div>
+
+<md-content layout-padding class="md-whiteframe-1dp">
+  <form layout="column">
+    <md-input-container>
+      <label for="name">Name</label>
+      <input type="text" ng-model="studentCtrl.student.name">
+    </md-input-container>
+
+    <div layout="row" layout-xs="column">
+      <md-input-container flex="grow">
+        <label for="cpf">CPF</label>
+        <input type="text" ng-model="studentCtrl.student.cpf">
+      </md-input-container>
+
+      <md-input-container flex="grow">
+        <label for="rg">RG</label>
+        <input type="text" ng-model="studentCtrl.student.rg">
+      </md-input-container>
+    </div>
+
+    <md-input-container>
+      <label for="email">Email</label>
+      <input type="email" ng-model="studentCtrl.student.email">
+    </md-input-container>
+
+    <div layout="row" layout-align="end" layout-align-xs="center">
+      <md-button class="md-raised md-warn">Remove</md-button>
+      <md-button class="md-raised">Cancel</md-button>
+      <md-button class="md-raised md-primary" ng-click="studentCtrl.save()">Save</md-button>
+    </div>
+  </form>
+</md-content>
