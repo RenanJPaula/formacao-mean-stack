@@ -166,7 +166,7 @@ Parece meio óbvio utilizar as funcionalidades disponíveis no protocolo entreta
 
 Exemplos clássicos do mau uso do protocolo:
 - Métodos get que alteram o estado do servidor;
-- Despropanização do aceso aos recursos;
+- Despadronização do aceso aos recursos;
 - Utilização do POST para a execução de todos os tipos de operações;
 - Utilização incorreta dos códigos de status;
 
