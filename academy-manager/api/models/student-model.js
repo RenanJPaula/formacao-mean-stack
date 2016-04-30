@@ -53,7 +53,7 @@ module.exports.findAll = function findAll() {
  */
 module.exports.findById = function findById(studentId) {
   return new Promise(function(resolve, reject) {
-    let query = { _id : studentId };
+    let query = { _id: studentId, active: true };
 
     Student.findOne(query, function(err, data) {
       if(err) {

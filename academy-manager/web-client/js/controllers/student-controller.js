@@ -3,53 +3,56 @@
 
   angular.module('am').controller('StudentCtrl', controller);
 
-  controller.$inject = ['$http', 'StudentService'];
+  controller.$inject = ['StudentService', '$location', '$routeParams', '$mdToast', 'MessageService'];
 
-  function controller($http, studentService) {
+  function controller(studentService, $location, $routeParams, $mdToast, messageService) {
     var ctrl = this;
 
-    ctrl.save = function() {
-      studentService.save(ctrl.student)
+    ctrl.init = function() {
+      ctrl.student = {};
+
+      var id = $routeParams.id;
+      if(id) {
+        studentService.getById(id)
+          .then(function(res) {
+            ctrl.student = res.data;
+          })
+          .catch(function(res) {
+            messageService.showError(res.messages);
+          });
+      }
+    };
+
+    ctrl.save = function(student) {
+      studentService.save(student)
         .then(function(res) {
-          ctrl.messages = res.messages;
-          ctrl.loadList();
+          messageService.showSuccess(res.messages);
+          student._id = res.data;
+          $location.search({}).path('/student/' + student._id + '/edit');
+        })
+        .catch(function(res) {
+          messageService.showError(res.messages);
+        });
+    };
+
+    ctrl.remove = function(id) {
+      studentService.remove(id)
+        .then(function(res) {
+          messageService.showSuccess(res.messages);
           ctrl.student = {};
+          $location.search({}).path('/student/new');
         })
         .catch(function(res) {
-          console.log(res);
+          messageService.showError(res.messages);
         });
     };
 
-    ctrl.loadList = function() {
-      studentService.getAll()
-        .then(function(res) {
-          ctrl.students = res.data;
-        })
-        .catch(function(res) {
-          console.log(res);
-        });
+    ctrl.cancel = function() {
+      $location.search({}).path('/students');
     };
 
-    ctrl.load = function(student) {
-      studentService.getById(student._id)
-        .then(function(res) {
-          ctrl.student = res.data;
-        })
-        .catch(function(res) {
-          console.log(res);
-        });
-    };
-
-    ctrl.remove = function(student) {
-      studentService.remove(student._id)
-        .then(function(res) {
-          ctrl.messages = res.messages;
-          ctrl.loadList();
-          ctrl.student = {};
-        })
-        .catch(function(res) {
-          console.log(res);
-        });
+    ctrl.new = function() {
+      $location.search({}).path('/student/new');
     };
 
   }

@@ -16,7 +16,12 @@
 				controller: 'StudentsCtrl',
 				controllerAs: 'studentsCtrl'
 			})
-      .when('/student', {
+      .when('/student/new', {
+				templateUrl: 'view/student.html',
+				controller: 'StudentCtrl',
+				controllerAs: 'studentCtrl'
+			})
+      .when('/student/:id/edit', {
 				templateUrl: 'view/student.html',
 				controller: 'StudentCtrl',
 				controllerAs: 'studentCtrl'

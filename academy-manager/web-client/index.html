@@ -41,9 +41,13 @@
       </nav>
     </header>
 
+    <div ng-controller="MessageCtrl"></div>
+
     <main class="main-container" ng-view="">
       <!-- CONTENT HERE! -->
     </main>
+
+    <br>
 
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
@@ -57,7 +61,9 @@
     <script src="/js/config/api-config.js"></script>
     <script src="/js/config/route-config.js"></script>
     <script src="/js/config/icon-config.js"></script>
+    <script src="/js/services/message-service.js"></script>
     <script src="/js/services/student-service.js"></script>
+    <script src="/js/controllers/message-controller.js"></script>
     <script src="/js/controllers/menu-controller.js"></script>
     <script src="/js/controllers/students-controller.js"></script>
     <script src="/js/controllers/student-controller.js"></script>

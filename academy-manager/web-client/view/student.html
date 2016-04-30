@@ -1,37 +1,40 @@
 <div layout="row" layout-wrap>
   <div flex="grow">
-    <h3>Student</h3>
+    <h3>{{studentCtrl.student._id ? 'Edit' : 'New'}} Student</h3>
   </div>
 </div>
 
-<md-content layout-padding class="md-whiteframe-1dp">
-  <form layout="column">
+<md-content layout-padding class="md-whiteframe-1dp" ng-init="studentCtrl.init()">
+  <form layout="column" ng-submit="studentCtrl.save(studentCtrl.student)">
     <md-input-container>
       <label for="name">Name</label>
-      <input type="text" ng-model="studentCtrl.student.name">
+      <input type="text" ng-model="studentCtrl.student.name" required>
     </md-input-container>
 
     <div layout="row" layout-xs="column">
       <md-input-container flex="grow">
         <label for="cpf">CPF</label>
-        <input type="text" ng-model="studentCtrl.student.cpf">
+        <input type="text" ng-model="studentCtrl.student.cpf" required>
       </md-input-container>
 
       <md-input-container flex="grow">
         <label for="rg">RG</label>
-        <input type="text" ng-model="studentCtrl.student.rg">
+        <input type="text" ng-model="studentCtrl.student.rg" required>
       </md-input-container>
     </div>
 
     <md-input-container>
       <label for="email">Email</label>
-      <input type="email" ng-model="studentCtrl.student.email">
+      <input type="email" ng-model="studentCtrl.student.email" required>
     </md-input-container>
 
     <div layout="row" layout-align="end" layout-align-xs="center">
-      <md-button class="md-raised md-warn">Delete</md-button>
-      <md-button class="md-raised" hide-xs>Cancel</md-button>
-      <md-button class="md-raised md-primary" ng-click="studentCtrl.save()">Save</md-button>
+      <md-button class="md-raised md-accent" ng-show="studentCtrl.student._id"
+                 ng-click="studentCtrl.new()">New</md-button>
+      <md-button class="md-raised md-warn" ng-show="studentCtrl.student._id"
+                 ng-click="studentCtrl.remove(studentCtrl.student._id)">Delete</md-button>
+      <md-button class="md-raised" hide-xs ng-click="studentCtrl.cancel()">Cancel</md-button>
+      <md-button class="md-raised md-primary" type="submit">Save</md-button>
     </div>
   </form>
 </md-content>

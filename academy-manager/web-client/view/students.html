@@ -4,9 +4,10 @@
   </div>
 </div>
 
-<md-content layout-padding class="md-whiteframe-1dp">
-  <md-list ng-init="studentsCtrl.loadList()">
-    <md-list-item class="md-2-line" ng-repeat="student in studentsCtrl.students">
+<md-content layout-padding class="md-whiteframe-1dp" ng-init="studentsCtrl.init()">
+  <md-list>
+    <md-list-item class="md-2-line" ng-repeat="student in studentsCtrl.students"
+                  ng-click="studentsCtrl.edit(student._id)">
       <img ng-src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/12295463_894166364011842_1297552435546330753_n.jpg?oh=b2b5c891a2ed1483f6fb7750f9f490e0&oe=57ADB685&__gda__=1472000829_72a3c51cb8000e02dbe2d729834b4c86"
           class="md-avatar" alt="Avatar" />
       <div class="md-list-item-text" layout="column">
@@ -17,7 +18,7 @@
   </md-list>
 
   <div layout="row">
-    <md-button class="md-fab md-fab-bottom-right" aria-label="New">
+    <md-button class="md-fab md-fab-bottom-right" aria-label="New" ng-click="studentsCtrl.new()">
       <md-icon md-svg-src="content:add"></md-icon>
     </md-button>
   </div>
