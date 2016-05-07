@@ -6,10 +6,23 @@
 
 <md-content layout-padding class="md-whiteframe-1dp" ng-init="studentCtrl.init()">
   <form layout="column" ng-submit="studentCtrl.save(studentCtrl.student)">
-    <md-input-container>
-      <label for="name">Name</label>
-      <input type="text" ng-model="studentCtrl.student.name" required>
-    </md-input-container>
+
+    <div layout="row" layout-xs="column" layout-sm="column" class="md-inline-form">
+      <md-input-container flex="50" flex-xs="100" flex-sm="100">
+        <label for="name">Name</label>
+        <input type="text" ng-model="studentCtrl.student.name" required>
+      </md-input-container>
+
+      <div layout="row">
+        <md-radio-group ng-model="studentCtrl.student.sex">
+          <md-radio-button value="Male" class="md-primary">Male</md-radio-button>
+          <md-radio-button value="Female">Female</md-radio-button>
+        </md-radio-group>
+
+        <md-datepicker ng-model="studentCtrl.student.birthDate" md-placeholder="Birth date" flex-xs="50">
+        </md-datepicker>
+      </div>
+    </div>
 
     <div layout="row" layout-xs="column">
       <md-input-container flex="grow">
@@ -26,6 +39,18 @@
     <md-input-container>
       <label for="email">Email</label>
       <input type="email" ng-model="studentCtrl.student.email" required>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Observation</label>
+      <textarea ng-model="studentCtrl.student.observation" md-select-on-focus md-maxlength="200" rows="5">
+      </textarea>
+    </md-input-container>
+
+    <md-input-container>
+      <label for="phones">Phones</label>
+      <md-chips ng-model="studentCtrl.student.phones" placeholder="Add new phone">
+      </md-chips>
     </md-input-container>
 
     <div layout="row" layout-align="end" layout-align-xs="center">

@@ -27,8 +27,14 @@
 
     svc.getById = function(id) {
       return $q(function(resolve, reject) {
-        var request = $http.get(api.students + id);
-        defaultRequestCallback(request, resolve, reject);
+        $http.get(api.students + id)
+          .success(function(resp) {
+            resp.data.birthDate = resp.data.birthDate ? new Date(resp.data.birthDate) : null;
+            resolve(resp);
+          })
+          .error(function(resp) {
+            reject(resp);
+          });
       });
     };
 

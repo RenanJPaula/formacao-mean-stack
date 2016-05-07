@@ -3,4 +3,5 @@
 , "record-success-inserted": "Registro inserido com sucesso!"
 , "record-success-updated": "Registro atualizado com sucesso!"
 , "record-success-removed": "Registro removido com sucesso!"
+, "name-required": "O campo nome é de preenchimento obrigatório!"
 }

@@ -1,6 +1,7 @@
 'use strict';
 
-var mongoose = require('mongoose')
+var error = require('./error-model')
+  , mongoose = require('mongoose')
   , addressSchema = new mongoose.Schema({
       alias: { type: mongoose.Schema.Types.String, required: true, trim: true },
       cep: { type: mongoose.Schema.Types.String, required: true, trim: true },
@@ -38,7 +39,7 @@ module.exports.findAll = function findAll() {
 
     Student.find(query, function(err, data) {
       if(err) {
-        reject(err);
+        reject(new error.MongooseError(err));
       } else {
         resolve(data);
       }
@@ -57,7 +58,7 @@ module.exports.findById = function findById(studentId) {
 
     Student.findOne(query, function(err, data) {
       if(err) {
-        reject(err);
+        reject(new error.MongooseError(err));
       } else {
         resolve(data);
       }
@@ -74,7 +75,7 @@ module.exports.save = function save(student) {
   return new Promise(function(resolve, reject) {
     new Student(student).save(function(err, data) {
       if(err) {
-        reject(err);
+        reject(new error.MongooseError(err));
       } else {
         resolve(data);
       }
@@ -103,7 +104,7 @@ module.exports.update = function update(student) {
 
     Student.update(query, student, function(err, data) {
       if(err) {
-        reject(err);
+        reject(new error.MongooseError(err));
       } else {
         resolve(data);
       }
@@ -123,7 +124,7 @@ module.exports.remove = function remove(studentId) {
 
     Student.update(query, mod, function(err, data) {
       if(err) {
-        reject(err);
+        reject(new error.MongooseError(err));
       } else {
         resolve(data);
       }

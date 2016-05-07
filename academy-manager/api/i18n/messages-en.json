@@ -3,4 +3,5 @@
 , "record-success-inserted": "Record successfully added!"
 , "record-success-updated": "Record successfully updated!"
 , "record-success-removed": "Record successfully removed!"
+, "name-required": "Field name required!"
 }

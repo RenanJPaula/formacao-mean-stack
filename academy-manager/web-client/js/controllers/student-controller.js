@@ -10,6 +10,7 @@
 
     ctrl.init = function() {
       ctrl.student = {};
+      ctrl.student.phones = [];
 
       var id = $routeParams.id;
       if(id) {
