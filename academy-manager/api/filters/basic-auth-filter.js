@@ -2,7 +2,8 @@
 
 var User = require ('../models/user-model')
   , debug = require('../config/debug-config')('basic-auth-filter')
-  , auth = require('basic-auth');
+  , auth = require('basic-auth')
+  , error = require('../models/error-model');
 
 module.exports = function(req, res, next) {
   let _credentials = auth(req);
@@ -15,9 +16,9 @@ module.exports = function(req, res, next) {
         req.user = user;
         next();
       }).catch(function(err) {
-        res.sendStatus(403);
+        next(new error.AuthorizationRequired(res));
       });
   } else {
-    res.sendStatus(403);
+    next(new error.AuthorizationRequired(res));
   }
 };

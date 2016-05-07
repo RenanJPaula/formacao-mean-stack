@@ -1,5 +1,7 @@
 {
   "unespected-error": "Erro inesperado! Por favor, tente novamente mais tarde."
+, "authorization-required": "Autorização requerida!"
+, "forbidden": "Sem permissão!"
 , "record-success-inserted": "Registro inserido com sucesso!"
 , "record-success-updated": "Registro atualizado com sucesso!"
 , "record-success-removed": "Registro removido com sucesso!"
