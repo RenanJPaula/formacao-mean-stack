@@ -6,4 +6,5 @@
 , "record-success-updated": "Registro atualizado com sucesso!"
 , "record-success-removed": "Registro removido com sucesso!"
 , "name-required": "O campo nome é de preenchimento obrigatório!"
+, "email-required": "O campo email é de preenchimento obrigatório!"
 }

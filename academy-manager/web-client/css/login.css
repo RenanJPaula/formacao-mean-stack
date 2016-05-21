@@ -1,0 +1,34 @@
+body {
+  background-color: rgb(242,242,242);
+}
+
+md-toolbar {
+	height: 25%;
+	width: 100%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+md-whiteframe {
+  background: #fff;
+  height: 500px;
+  width: 400px;
+  border-radius: 15px;
+}
+
+.md-login {
+  margin-top: 16px;
+	width: 100%;
+}
+
+.formLogin {
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.main-ico {
+  width: 90px;
+  height: 90px
+}

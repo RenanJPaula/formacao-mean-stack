@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="am">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Academy Manager</title>
+
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+  </head>
+<body layout="row" layout-align="center center">
+
+  <md-whiteframe class="md-whiteframe-z5">
+    <md-toolbar layout-align="center center">
+      <h1 class="md-display-2">
+        <md-icon md-svg-src="social:people" class="main-ico"></md-icon>
+      </h1>
+    </md-toolbar>
+
+    <md-content layout="row">
+      <form name="userForm" class="formLogin">
+
+        <md-input-container class="md-block">
+          <label>Name</label>
+          <input name="uLogin" required>
+          <div ng-messages="userForm.uLogin.$error">
+            <div ng-message="required">Field required.</div>
+          </div>
+        </md-input-container>
+
+        <md-input-container class="md-block">
+          <label>Password</label>
+          <input name="uPassword" type="password" required>
+          <div ng-messages="userForm.uPassword.$error">
+            <div ng-message="required">Field required.</div>
+          </div>
+        </md-input-container>
+
+        <div layout="row" layout-align="center center">
+          <div>Invalid Name or Password.</div>
+        </div>
+
+        <div layout="row">
+          <md-button type="submit" class="md-login md-raised md-primary">
+            Login
+          </md-button>
+        </div>
+      </form>
+
+    </md-content>
+  </md-whiteframe>
+
+    <br>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/config/api-config.js"></script>
+    <script src="/js/config/icon-config.js"></script>
+  </body>
+</html>

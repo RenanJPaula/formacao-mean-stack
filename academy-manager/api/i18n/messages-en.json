@@ -6,4 +6,5 @@
 , "record-success-updated": "Record successfully updated!"
 , "record-success-removed": "Record successfully removed!"
 , "name-required": "Field name required!"
+, "email-required": "Field email required!"
 }

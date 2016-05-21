@@ -3,9 +3,7 @@
 var mongoose = require('mongoose')
   , schema = new mongoose.Schema({
       name: { type: mongoose.Schema.Types.String, required: true, trim: true },
-      password: { type: mongoose.Schema.Types.String, required: true, trim: true },
-      type: { type: mongoose.Schema.Types.String, required: true, enum: ['school', 'student']},
-      profile: { type: mongoose.Schema.Types.ObjectId, required: true }
+      password: { type: mongoose.Schema.Types.String, required: true, trim: true }
     })
   , User = mongoose.model('User', schema);
 

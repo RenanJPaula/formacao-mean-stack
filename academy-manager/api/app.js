@@ -17,7 +17,7 @@ app.use(cors());
 
 app.use(i18n);
 
-// app.use(basicAuth);
+app.use(basicAuth);
 
 routeConfig.configApiRoutes(app);
 

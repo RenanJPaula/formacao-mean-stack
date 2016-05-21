@@ -7,7 +7,7 @@ var env = {
   defaultLocale: 'en',
   defaultMessage: 'unespected-error',
   db: {
-    uri: process.env.DB_URI || 'mongodb://localhost/school',
+    uri: process.env.DB_URI || 'mongodb://admin:admin@ds011903.mlab.com:11903/formacao-mean-stack-academy-manager',
     credentials: {
       name: process.env.DB_USER || '',
       pass: process.env.DB_PASS || ''
