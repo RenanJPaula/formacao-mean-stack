@@ -3,7 +3,8 @@
 
   var BASE_API_PATH = 'http://localhost:3000/api/v1/'
     , api = {
-        students: buildResourceUri('students')
+        userProfile: buildResourceUri('user/profile')
+      , students: buildResourceUri('students')
       , course: buildResourceUri('course')
       };
 

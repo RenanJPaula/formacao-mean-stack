@@ -11,7 +11,7 @@
   </head>
 <body layout="row" layout-align="center center">
 
-  <md-whiteframe class="md-whiteframe-z5">
+  <md-whiteframe class="md-whiteframe-z5" ng-controller="LoginCtrl as ctrl">
     <md-toolbar layout-align="center center">
       <h1 class="md-display-2">
         <md-icon md-svg-src="social:people" class="main-ico"></md-icon>
@@ -19,11 +19,12 @@
     </md-toolbar>
 
     <md-content layout="row">
-      <form name="userForm" class="formLogin">
+      <form name="userForm" class="formLogin"
+            ng-init="ctrl.init()" ng-submit="ctrl.login(ctrl.user)">
 
         <md-input-container class="md-block">
           <label>Name</label>
-          <input name="uLogin" required>
+          <input name="uLogin" required ng-model="ctrl.user.name">
           <div ng-messages="userForm.uLogin.$error">
             <div ng-message="required">Field required.</div>
           </div>
@@ -31,13 +32,13 @@
 
         <md-input-container class="md-block">
           <label>Password</label>
-          <input name="uPassword" type="password" required>
+          <input name="uPassword" type="password" required ng-model="ctrl.user.password">
           <div ng-messages="userForm.uPassword.$error">
             <div ng-message="required">Field required.</div>
           </div>
         </md-input-container>
 
-        <div layout="row" layout-align="center center">
+        <div layout="row" layout-align="center center" ng-show="ctrl.invalidLogin">
           <div>Invalid Name or Password.</div>
         </div>
 
@@ -64,5 +65,7 @@
     <script src="/js/app.js"></script>
     <script src="/js/config/api-config.js"></script>
     <script src="/js/config/icon-config.js"></script>
+    <script src="/js/services/user-service.js"></script>
+    <script src="/js/controllers/login-controller.js"></script>
   </body>
 </html>
