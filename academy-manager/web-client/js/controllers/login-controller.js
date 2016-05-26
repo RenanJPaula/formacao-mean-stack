@@ -9,6 +9,7 @@
     var ctrl = this;
 
     ctrl.init = function() {
+      userService.clearCredentials();
       ctrl.invalidLogin = false;
       ctrl.user = {};
     };

@@ -3,13 +3,22 @@
 
 	angular.module('am').factory('BasicAuthInterceptor', factory);
 
-	factory.$inject = ['$q', '$window'];
+	factory.$inject = ['$q', '$window', '$cookies'];
 
-  function factory($q, $window) {
-		var interceptor = {};
+  function factory($q, $window, $cookies) {
+		var interceptor = {}
+			, TAG_USER = 'USER';
+
+		function generateCredentials(user) {
+      return btoa(user.name + ':' + user.password);
+    }
 
 		interceptor.request = function(config) {
-			config.headers.Authorization = 'Basic';
+			var user = $cookies.getObject(TAG_USER);
+			if(!user) {
+				$window.location.href = 'login';
+			}
+			config.headers.Authorization = 'Basic ' + generateCredentials(user);
 			return config;
 		};
 
