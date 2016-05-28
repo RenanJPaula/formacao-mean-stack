@@ -1,0 +1,24 @@
+.progress-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(242, 242, 242);
+    opacity: 0.6;
+    z-index: 999;
+    filter: alpha(opacity=70);
+    -webkit-transition:all linear 0.2s;
+    transition:all linear 0.2s;
+}
+
+.progress-container .ng-hide {
+  opacity:0;
+}
+
+.progress {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -28px 0 0 -25px;
+}

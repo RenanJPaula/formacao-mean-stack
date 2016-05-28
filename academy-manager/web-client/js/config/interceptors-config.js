@@ -7,6 +7,7 @@
 
   function config($httpProvider) {
     $httpProvider.interceptors.push('BasicAuthInterceptor');
+    $httpProvider.interceptors.push('ProgressInterceptor');
   }
 
 })(angular);

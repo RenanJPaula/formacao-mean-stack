@@ -36,6 +36,10 @@
       $cookies.remove(TAG_USER);
     };
 
+    svc.getUser = function() {
+      return $cookies.getObject(TAG_USER);
+    };
+
     return svc;
   }
 
